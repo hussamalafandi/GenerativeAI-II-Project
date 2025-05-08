@@ -1,0 +1,30 @@
+
+# 📁 Файл: requirements.txt
+# Базовые библиотеки
+python-dotenv>=1.0.0
+requests>=2.31.0
+tqdm>=4.66.0
+
+# LLM + эмбеддинги
+transformers>=4.36.0
+sentence-transformers>=2.2.2
+datasets>=2.17.0
+torch>=2.1.0
+
+# RAG-инфраструктура
+chromadb==0.4.24
+faiss-cpu>=1.7.4
+langchain>=0.1.0
+
+# Визуализация и трекинг
+wandb==0.15.12
+streamlit==1.31.1
+
+# LangSmith (для отладки и логирования)
+langsmith>=0.0.69
+
+# Jupyter support (если нужно)
+jupyterlab
+notebook
+
+
