@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{needspace}
+
+\definecolor{linkblue}{RGB}{40, 90, 150}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue
+}
+
+\title{\textbf{Abschlussprojekt: Entwicklung eines RAG-Systems}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Überblick}
+
+In dieser Aufgabe entwickeln Sie ein \textbf{Retrieval-Augmented Generation (RAG)}-System, das externe Dokumente verwendet, um Benutzerfragen zu beantworten. Ziel ist es zu zeigen, wie große Sprachmodelle (LLMs) mit aktuellem, domänenspezifischem Wissen verknüpft werden können.
+
+Das verwendete Modell hat einen Wissensstand mit \textbf{Stichtag August 2024}. Ihr System muss daher Informationen aus \textbf{externer Dokumentenrecherche} verwenden, um Fragen zu \textbf{Ereignissen nach diesem Datum} korrekt zu beantworten.
+
+\section*{Projektanforderungen}
+
+\subsection*{Dokumentenauswahl und -verarbeitung}
+Wählen Sie ein Dokument über ein Ereignis nach August 2024. Speichern und indexieren Sie es mit \textbf{ChromaDB} und aktivierter Persistenz. Verwenden Sie eine geeignete Textaufteilung, um mindestens \textbf{50 sinnvolle Chunks} zu erzeugen.
+
+\subsection*{Systemarchitektur}
+Nutzen Sie das Modell \texttt{gemini-2.0-flash}. Die Pipeline ist mit \textbf{LangChain} oder \textbf{LlamaIndex} umzusetzen. Zur Nachvollziehbarkeit und Beobachtbarkeit verwenden Sie \textbf{LangSmith} oder \textbf{LangFuse}.
+
+Der Einsatz von \textbf{vorgefertigten Agenten ist nicht erlaubt}. Die zentralen Komponenten müssen selbst entwickelt werden.
+
+Das System muss folgende Funktionen unterstützen:
+\begin{itemize}[noitemsep]
+  \item \textbf{Dialogführung} – mehrstufige Benutzerdialoge.
+  \item \textbf{Kontextverwaltung} – Frühere Benutzereingaben sollen gespeichert und so verwaltet werden, dass sie auch in späteren Sitzungen oder an anderen Tagen erneut abgerufen und für die Beantwortung neuer Fragen genutzt werden können.
+\end{itemize}
+
+\subsection*{Wirksamkeitstest}
+Erstellen Sie mindestens \textbf{fünf Fragen}, die nur mit Hilfe des Dokuments korrekt beantwortet werden können. Das Modell soll diese Fragen \textbf{nicht ohne Dokumentretrieval} beantworten können.
+
+Testen Sie Ihr System mit und ohne Retrieval und dokumentieren Sie die Unterschiede. Variieren Sie außerdem die \textbf{System-Prompts} und analysieren Sie deren Auswirkungen.
+
+\subsection*{Codequalität}
+Ihr Repository muss gute Entwicklungsstandards einhalten:
+\begin{itemize}[noitemsep]
+  \item Keine großen Dateien im Git-Verlauf.
+  \item Keine geheimen Token in den Commits.
+  \item Gut strukturierter und dokumentierter Code.
+\end{itemize}
+
+\section*{Abgabehinweise}
+
+\textcolor{linkblue}{\textbf{Abgabefrist:} 11.05 um 23:59 Uhr}
+
+Jede:r Studierende hat einen eigenen Branch im Repository. Öffnen Sie einen \textcolor{linkblue}{\textbf{Pull Request (PR)}} von Ihrem Arbeits-Branch auf den Ihnen zugewiesenen Branch.
+
+Das Repository befindet sich unter folgendem Link:
+\href{https://github.com/hussamalafandi/GenerativeAI-II-Project}{%
+  \texttt{github.com/hussamalafandi/\\GenerativeAI-II-Project}}
+
+Ihr PR muss Folgendes enthalten:
+\begin{itemize}[noitemsep]
+  \item Die vollständige Implementierung Ihres RAG-Systems.
+  \item Ein Jupyter-Notebook oder Skript mit Demonstration der:
+        \begin{itemize}[noitemsep]
+          \item Dokumentenindexierung
+          \item Dokumentenabfrage (Retrieval)
+          \item Fragebeantwortung
+          \item Prompt-Variationen
+        \end{itemize}
+  \item Einen Link zu Ihrem Projekt in \textbf{LangSmith} oder \textbf{LangFuse}.
+\end{itemize}
+
+\needspace{5\baselineskip}
+\section*{Bonus (Zusatzpunkte)}
+
+Für Zusatzpunkte muss Ihr System beide der folgenden Funktionen enthalten:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Metadatenfilterung} – Eingrenzung der Dokumentensuche nach Attributen.
+  \item \textbf{Multi-Query-Retrieval} – Nutzung mehrerer oder umformulierter Anfragen zur Verbesserung der Antwortqualität.
+\end{enumerate}
+
+\needspace{5\baselineskip}
+\section*{Abschließender Hinweis}
+
+Ihr System soll nachweisen, dass es nur mit der Hilfe von Dokumentretrieval zu korrekten Antworten kommt. Der Mehrwert Ihres RAG-Systems zeigt sich darin, dass das Sprachmodell allein nicht ausreicht.
+
+\end{document}
