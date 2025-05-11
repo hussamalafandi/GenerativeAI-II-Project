@@ -1,0 +1,50 @@
+[
+  {
+    "question": "Ab wann können Praxen die ePA nutzen?",
+    "answer": "Praxen können die ePA freiwillig ab dem 29. April 2025 nutzen, sobald ihre PVS-Hersteller die entsprechenden ePA-Module bereitstellen.  Die Verfügbarkeit hängt vom jeweiligen PVS-Anbieter und dessen Rollout-Zeitplan ab.  Ab dem 1. Oktober 2025 wird die Nutzung der ePA verpflichtend."
+  },
+  {
+    "question": "Ist es sinnvoll, die ePA sofort auszuprobieren?",
+    "answer": "Ja, es ist sinnvoll, die ePA sofort auszuprobieren, sobald das ePA-Modul des PVS-Anbieters verfügbar ist.  Die FAQs aus dem PraxisInfoSpezial der KBV empfehlen dies ausdrücklich.  Durch frühzeitiges Testen können Praxisteams sich mit der ePA vertraut machen, die Funktionen testen und eventuelle Probleme mit dem Hersteller klären, bevor die Nutzung der ePA am 1. Oktober 2025 verpflichtend wird.  So kann ein reibungsloser Ablauf ab diesem Zeitpunkt sichergestellt werden."
+  },
+  {
+    "question": "Was unterscheidet die ePA von der Behandlungsdokumentation des Arztes oder Psychotherapeuten?",
+    "answer": "Die ePA (elektronische Patientenakte) ist eine **versichertengeführte, sekundäre Dokumentation**, die persönliche Gesundheitsdaten aus verschiedenen Quellen zusammenfasst (Arztbriefe, Befunde, Medikamentenlisten etc.).  Sie dient der Unterstützung der Anamnese, Befunderhebung und Behandlung, **ersetzt aber nicht die primäre Behandlungsdokumentation** des Arztes oder Psychotherapeuten im Praxisverwaltungssystem (PVS).  Ärzte und Psychotherapeuten bleiben weiterhin gesetzlich und berufsordnungsmäßig verpflichtet, alle medizinisch relevanten Informationen zeitnah im PVS zu dokumentieren – unabhängig davon, ob die ePA genutzt wird oder nicht.  Die ePA ergänzt somit die Behandlungsdokumentation, ersetzt sie aber nicht."
+  },
+  {
+    "question": "Wie erteilt der Patient sein Einverständnis, dass der Arzt oder Psychotherapeut Zugriff auf die ePA hat?",
+    "answer": "Der Patient muss kein explizites Einverständnis geben, damit Arzt oder Psychotherapeut im Behandlungskontext auf seine ePA zugreifen können.  Der Zugriff erfolgt automatisch für 90 Tage nach dem Einstecken der elektronischen Gesundheitskarte.  Der Behandlungskontext wird durch das Einstecken der Karte nachgewiesen.  Eine zusätzliche Erlaubnis ist weder mündlich noch schriftlich erforderlich.  Möchte der Patient den Zugriff verhindern, muss er dies aktiv bei seiner Krankenkasse oder einer Ombudsstelle beantragen."
+  },
+  {
+    "question": "Wie wird ein Verlauf möglich sein, wenn die Daten nur 90 Tage zur Verfügung stehen?",
+    "answer": "Der Zugriff auf die ePA ist nicht auf 90 Tage beschränkt.  Obwohl der initiale Zugriff nach dem Einstecken der eGK 90 Tage beträgt, kann der Patient über die ePA-App diesen Zeitraum beliebig verlängern,  sogar dauerhaft.  Auch ein erneutes Einstecken der eGK verlängert den Zugriff erneut um 90 Tage."
+  },
+  {
+    "question": "Welche Daten müssen Ärzte und Psychotherapeuten in die ePA einstellen?",
+    "answer": "Ärzte und Psychotherapeuten müssen Daten in die ePA einstellen, die sie im aktuellen Behandlungskontext selbst erhoben haben und die in elektronischer Form vorliegen.  Konkret sind das:\n\n* Laborbefunde\n* Befunddaten aus bildgebender Diagnostik\n* Befundberichte aus invasiven und chirurgischen sowie nicht-invasiven oder konservativen Maßnahmen\n* Elektronische Arztbriefe\n\nZusätzlich kann der Patient verlangen, dass die Patientenakte, die der Arzt oder Psychotherapeut führt, in die ePA eingestellt wird.  Handschriftliche Gesprächsaufzeichnungen, die über die Patientenakte hinausgehen, müssen nicht eingestellt werden.\n\nBei Psychotherapeuten ist besonders zu beachten, dass es sich oft um Erkrankungen mit stigmatisierender Wirkung handelt.  Daher müssen Patienten explizit auf ihr Widerspruchsrecht hingewiesen und ein etwaiger Widerspruch in der Behandlungsdokumentation vermerkt werden.  Ungeklärte Fragen bestehen noch zum Umgang mit Minderjährigen und subjektiven Aufzeichnungen."
+  },
+  {
+    "question": "Ab wann können Praxen die ePA nutzen?",
+    "answer": "Praxen können die ePA freiwillig ab dem 29. April 2025 nutzen, sobald ihre PVS-Hersteller die entsprechenden ePA-Module bereitstellen. Die Verfügbarkeit hängt vom jeweiligen PVS-Anbieter und dessen Rollout-Zeitplan ab. Ab dem 1. Oktober 2025 wird die Nutzung der ePA verpflichtend."
+  },
+  {
+    "question": "warum nicht 2024?",
+    "answer": "Der bereitgestellte Text gibt keine Informationen darüber, warum die ePA nicht bereits 2024 eingeführt wurde.  Die Dokumente nennen lediglich den Starttermin für die freiwillige Nutzung (29. April 2025) und die verpflichtende Nutzung (1. Oktober 2025).  Es werden keine Gründe für die Wahl dieser Termine oder für die Nicht-Einführung in 2024 genannt."
+  },
+  {
+    "question": "was soll ich machen?",
+    "answer": "Die Frage \"Was soll ich machen?\" ist zu allgemein.  Um Ihnen eine hilfreiche Antwort geben zu können, benötige ich mehr Kontext.  Beziehen Sie sich auf die ePA?  Haben Sie ein spezifisches Problem oder eine Unsicherheit bezüglich der Implementierung, Nutzung oder des Umgangs mit der ePA?\n\nBitte präzisieren Sie Ihre Frage.  Zum Beispiel:\n\n* \"Was soll ich tun, wenn mein PVS-Anbieter das ePA-Modul noch nicht bereitgestellt hat?\"\n* \"Was soll ich tun, wenn ein Patient wichtige Informationen aus seiner ePA entfernt hat?\"\n* \"Was soll ich tun, um mich optimal auf die verpflichtende Nutzung der ePA vorzubereiten?\"\n\nJe genauer Ihre Frage formuliert ist, desto besser kann ich Ihnen weiterhelfen."
+  },
+  {
+    "question": "ich will ePA",
+    "answer": "Die Frage \"Ich will ePA\" ist zu ungenau.  Um Ihnen weiterhelfen zu können, brauche ich mehr Informationen.  Was genau möchten Sie mit der ePA tun?  Möchten Sie wissen, wie Sie die ePA nutzen können?  Wann Sie sie nutzen können?  Welche Voraussetzungen es gibt?  Oder haben Sie ein bestimmtes Problem im Zusammenhang mit der ePA?\n\nBitte präzisieren Sie Ihre Frage.  Zum Beispiel:\n\n* \"Wie kann ich die ePA nutzen?\"\n* \"Wann kann ich die ePA in meiner Praxis nutzen?\"\n* \"Welche Daten kann ich in der ePA sehen?\"\n* \"Welche Voraussetzungen muss ich erfüllen, um die ePA zu nutzen?\"\n* \"Ich habe ein Problem mit der ePA-App. Was kann ich tun?\"\n\nJe genauer Ihre Frage, desto besser kann ich Ihnen helfen."
+  },
+  {
+    "question": "\"Ich habe ein Problem mit der ePA-App. Was kann ich tun?\"",
+    "answer": "Basierend auf den bereitgestellten Informationen gibt es mehrere Möglichkeiten, wenn Sie ein Problem mit der ePA-App haben:\n\n1. **Kontaktieren Sie den Support Ihrer Krankenkasse:**  Die Krankenkasse stellt die App bereit und ist somit der erste Ansprechpartner für technische Probleme oder Fragen zur Funktionsweise.  Ihre Kontaktdaten finden Sie üblicherweise auf der Website Ihrer Krankenkasse oder innerhalb der App selbst.\n\n2. **Wenden Sie sich an die Ombudsstelle Ihrer Krankenkasse:**  Die Krankenkassen sind verpflichtet, Ombudsstellen einzurichten, die bei Fragen und Problemen rund um die ePA unterstützen.  Die Kontaktdaten der Ombudsstelle sollten ebenfalls über Ihre Krankenkasse zu finden sein.  Diese Stelle kann Ihnen bei der Lösung Ihres Problems helfen oder Sie an die richtige Stelle weiterleiten.\n\nDie bereitgestellten Dokumente geben keine detaillierten Anweisungen für die Fehlerbehebung bei spezifischen App-Problemen.  Die Lösungsstrategie konzentriert sich daher auf den Kontakt zu den Stellen, die für die Unterstützung bei der Nutzung der ePA verantwortlich sind.  Um eine genauere Hilfestellung zu erhalten, beschreiben Sie bitte Ihr Problem mit der ePA-App genauer.  Welche Fehlermeldung erhalten Sie?  Welche Funktion funktioniert nicht?  Welche Schritte haben Sie bereits unternommen?"
+  },
+  {
+    "question": "\"Ich habe ein Problem mit der ePA-App. Was kann ich tun?\"",
+    "answer": "Basierend auf den bereitgestellten Informationen haben Sie folgende Möglichkeiten, wenn Sie ein Problem mit der ePA-App haben:\n\n1. **Kontaktieren Sie den Support Ihrer Krankenkasse:** Die Krankenkasse ist verantwortlich für die Bereitstellung der App und somit der erste Ansprechpartner für technische Probleme oder Fragen zur Funktionsweise.  Die Kontaktdaten finden Sie auf der Website Ihrer Krankenkasse oder in der App selbst.\n\n2. **Wenden Sie sich an die Ombudsstelle Ihrer Krankenkasse:**  Die Krankenkassen sind verpflichtet, Ombudsstellen einzurichten, die bei Problemen mit der ePA unterstützen.  Die Kontaktdaten der Ombudsstelle sollten auf der Website Ihrer Krankenkasse zu finden sein.\n\nDie bereitgestellten Texte bieten keine detaillierten Anweisungen zur Fehlerbehebung.  Um Ihnen besser helfen zu können, beschreiben Sie bitte Ihr Problem genauer:\n\n* **Welche Fehlermeldung erhalten Sie (falls vorhanden)?**\n* **Welche Funktion der App funktioniert nicht?**\n* **Welche Schritte zur Fehlerbehebung haben Sie bereits unternommen?**\n\nJe detaillierter Ihre Beschreibung, desto gezielter kann ich Ihnen Hilfestellung geben."
+  }
+]

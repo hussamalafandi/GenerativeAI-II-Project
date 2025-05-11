@@ -1,0 +1,27 @@
+[
+  {
+    "frage": "Was steht im ePA-Entwurf 2025 zur Nutzung von Gesundheitsdaten?",
+    "antwort_mit_retrieval": "Der ePA-Entwurf 2025 sieht vor, dass gesetzlich Versicherte ab dem 15. Januar 2025 automatisch eine elektronische Patientenakte erhalten (Opt-out-Verfahren).  Diese enthält Gesundheitsdaten wie Arztbriefe, Befunde, Laborwerte, Röntgenbilder, Medikationspläne und Impfdaten.  Patienten können über eine ePA-App (oder ab Juli 2025 einen Desktop-Client) auf ihre Daten zugreifen, diese einsehen, verwalten und löschen sowie Zugriffsrechte für bis zu fünf weitere Personen vergeben. Ärzte erhalten Zugriff über ihre Praxisverwaltungssysteme (PVS) mit der eGK, standardmäßig für 90 Tage.  Ab Juli 2025 ist die freiwillige Datenspende für die Forschung möglich.  Ab März 2026 wird eine Volltextsuche in der ePA verfügbar sein.  Die Nutzung der ePA wird für Arztpraxen, Apotheken und Krankenhäuser ab dem 1. Oktober 2025 verpflichtend.  Größere Dateien wie DICOM-Bilder sind auf 25 MB begrenzt.  Unterstützte Formate sind PDF/A, TXT, XML, P7 und JSON.",
+    "antwort_ohne_retrieval": "Der Kontext enthält keine Informationen zum ePA-Entwurf 2025 und dessen Regelungen zur Nutzung von Gesundheitsdaten.  Um diese Frage zu beantworten, benötige ich weitere Informationen zum ePA-Entwurf 2025."
+  },
+  {
+    "frage": "Wie wird die Rolle der Gematik im Jahr 2025 beschrieben?",
+    "antwort_mit_retrieval": "Die Rolle der Gematik im Jahr 2025 wird durch ihre Arbeit an Lösungen zur Verbesserung der Praxistauglichkeit der ePA beschrieben.  Konkret wird erwähnt, dass sie an einem mobilen Zugriff für Rettungssanitäter arbeitet, um den Zugriff auf die ePA auch in Notfallsituationen zu ermöglichen.",
+    "antwort_ohne_retrieval": "Der Kontext enthält keine Informationen über die Rolle der Gematik im Jahr 2025.  Daher kann diese Frage nicht beantwortet werden."
+  },
+  {
+    "frage": "Welche neuen Zugriffsrechte werden im ePA-Update 2025 geregelt?",
+    "antwort_mit_retrieval": "Der gegebene Text beschreibt nicht, welche neuen Zugriffsrechte im ePA-Update 2025 geregelt werden.  Er konzentriert sich auf den automatischen Zugriff von Ärzten und Psychotherapeuten auf die ePA im Behandlungskontext durch das Stecken der elektronischen Gesundheitskarte und die damit verbundene 90-tägige Gültigkeit dieses Zugriffs.  Es werden keine neuen Zugriffsrechte im Zusammenhang mit dem Update 2025 erwähnt.",
+    "antwort_ohne_retrieval": "Der Kontext enthält keine Informationen über neue Zugriffsrechte im ePA-Update 2025.  Daher kann diese Frage basierend auf dem gegebenen Kontext nicht beantwortet werden."
+  },
+  {
+    "frage": "Was plant die Bundesregierung im ePA-Bereich für die Forschung ab 2025?",
+    "antwort_mit_retrieval": "Basierend auf dem gegebenen Text können aktuelle Laborbefunde oder das Ergebnis der letzten Koloskopie derzeit nur über die Suche in den Metadaten (Erstellungsdatum, Einrichtung, Fachgebiet, Dokumentart) gefunden werden.  Eine Volltextsuche über den Inhalt der Dokumente wird voraussichtlich ab März 2026 verfügbar sein.",
+    "antwort_ohne_retrieval": "Der gegebene Kontext enthält keine Informationen über die Pläne der Bundesregierung zur ePA-Forschung ab 2025.  Um diese Frage zu beantworten, bräuchte man zusätzliche Informationen aus anderen Quellen, wie z.B. Regierungserklärungen, Forschungsförderungsankündigungen oder  Pressemitteilungen."
+  },
+  {
+    "frage": "Welche Fristen gelten für Ärztinnen und Ärzte laut ePA-2025-Gesetz?",
+    "antwort_mit_retrieval": "Ab Oktober 2025 müssen Ärztinnen und Ärzte die ePA mit aktuellen Behandlungsdaten befüllen.  Bei Verstößen drohen Honorarkürzungen (1%) oder der Entzug der TI-Pauschale.  Die freiwillige Forschungsdatenspende ist ab Juli 2025 möglich.",
+    "antwort_ohne_retrieval": "Der Kontext enthält keine Informationen zu Fristen für Ärztinnen und Ärzte im ePA-2025-Gesetz.  Um diese Frage zu beantworten, benötige ich weitere Informationen zum ePA-2025-Gesetz."
+  }
+]
