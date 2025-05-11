@@ -1,4 +1,5 @@
-# qa_chain.py — интерактивный чат с базой через ChromaDB + Gemini (RAG с памятью через ConversationBufferMemory и интерактивным диалогом)
+# qa_chain.py — Interactive Chat with Document Retrieval via ChromaDB + Gemini
+# Implements Retrieval-Augmented Generation (RAG) with conversational memory using LangChain
 
 import os
 from dotenv import load_dotenv
@@ -11,10 +12,10 @@ from langchain.memory import ConversationBufferMemory
 from langsmith import traceable
 from langchain_core.tracers import LangChainTracer
 
-# 🔐 Загрузка переменных из .env
+# 🔐 Load environment variables (e.g., API keys) from .env file
 load_dotenv()
 
-# 🧠 Загружаем ChromaDB с эмбеддингами
+# 🧠 Load ChromaDB vector store with precomputed embeddings
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vectorstore = Chroma(
     persist_directory="chroma_store",
@@ -22,35 +23,35 @@ vectorstore = Chroma(
 )
 retriever = vectorstore.as_retriever()
 
-# 🧠 Инициализация памяти
+# 💬 Initialize memory to track conversation history
 memory = ConversationBufferMemory(
     return_messages=True,
     memory_key="chat_history"
 )
 
-# 📜 Шаблон генерации с контекстом и историей
+# 📜 Prompt template that includes history and context
 prompt = PromptTemplate.from_template("""
-Используй следующий контекст и историю диалога, чтобы ответить на вопрос.
-Если ответа нет в контексте — честно скажи, что не знаешь.
+Use the following context and conversation history to answer the question.
+If the answer is not in the context, say you don’t know.
 
-История:
+Chat History:
 {chat_history}
 
-Контекст:
+Context:
 {context}
 
-Вопрос: {question}
-Ответ:
+Question: {question}
+Answer:
 """)
 
-# 🤖 LLM Gemini Flash
+# 🤖 Load the Gemini model (Flash version)
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.3
 )
 
-# 🔗 Цепочка с использованием памяти
+# 🔗 Define the chain: retrieves context, formats prompt, generates answer
 chain = (
     RunnableLambda(lambda x: {
         "context": retriever.get_relevant_documents(x["question"]),
@@ -61,23 +62,24 @@ chain = (
     | llm
 )
 
-# 💬 Интерактивный режим
-print("🔎 Введите вопрос (или 'выход' для завершения):")
+# 💬 Interactive command-line interface
+print("🔎 Enter your question (or type 'exit' to quit):")
 while True:
-    question = input("\n🧠 Ваш вопрос: ")
-    if question.lower() in ["выход", "exit", "quit"]:
-        print("👋 До встречи!")
+    question = input("\n🧠 Your question: ")
+    if question.lower() in ["exit", "quit"]:
+        print("👋 Goodbye!")
         break
-    
-    # Создаём трассировщик
-    tracer = LangChainTracer()
-    
-    # Запуск с трассировкой
-    result = chain.invoke(
-    {"question": question},
-    config={"callbacks": [tracer]})
-    print("📄 Ответ:", result.content)
 
-    # Добавляем в память вручную (симулируем сохранение истории)
+    # 📊 Enable tracing for LangSmith
+    tracer = LangChainTracer()
+
+    # Execute the chain with tracing enabled
+    result = chain.invoke(
+        {"question": question},
+        config={"callbacks": [tracer]}
+    )
+    print("📄 Answer:", result.content)
+
+    # 🧠 Update memory manually after each turn
     memory.chat_memory.add_user_message(question)
     memory.chat_memory.add_ai_message(result.content)
