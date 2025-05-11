@@ -25,7 +25,7 @@ if os.path.exists("chroma_store"):
 # -----------------------------
 # 3. Load document (news article)
 # -----------------------------
-with open("brain_article.txt", "r", encoding="cp1252") as file:
+with open("./data/biocomputer_article.txt", "r", encoding="cp1252") as file:
     raw_text = file.read()
 
 # -----------------------------
@@ -52,6 +52,5 @@ vectorstore = Chroma(
     embedding_function=embedding_model
 )
 vectorstore.add_documents(documents)
-vectorstore.persist()
 
 print("✅ Indexed and persisted successfully.")

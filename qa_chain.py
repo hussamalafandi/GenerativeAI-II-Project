@@ -1,107 +1,83 @@
-# ===============================================================
-# 📁 Step 1: Load environment variables / Umgebungsvariablen laden
-# ===============================================================
-from dotenv import load_dotenv
+# qa_chain.py — интерактивный чат с базой через ChromaDB + Gemini (RAG с памятью через ConversationBufferMemory и интерактивным диалогом)
+
 import os
+from dotenv import load_dotenv
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnableLambda
+from langchain_community.vectorstores import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.memory import ConversationBufferMemory
+from langsmith import traceable
+from langchain_core.tracers import LangChainTracer
+
+# 🔐 Загрузка переменных из .env
 load_dotenv()
 
-# ===============================================================
-# 🤖 Step 2: Load the LLM model / LLM-Modell laden
-# ===============================================================
-from langchain_google_genai import ChatGoogleGenerativeAI
+# 🧠 Загружаем ChromaDB с эмбеддингами
+embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+vectorstore = Chroma(
+    persist_directory="chroma_store",
+    embedding_function=embedding_model
+)
+retriever = vectorstore.as_retriever()
+
+# 🧠 Инициализация памяти
+memory = ConversationBufferMemory(
+    return_messages=True,
+    memory_key="chat_history"
+)
+
+# 📜 Шаблон генерации с контекстом и историей
+prompt = PromptTemplate.from_template("""
+Используй следующий контекст и историю диалога, чтобы ответить на вопрос.
+Если ответа нет в контексте — честно скажи, что не знаешь.
+
+История:
+{chat_history}
+
+Контекст:
+{context}
+
+Вопрос: {question}
+Ответ:
+""")
+
+# 🤖 LLM Gemini Flash
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.3
 )
 
-# ===============================================================
-# 🔤 Step 3: Load embeddings / Embeddings laden
-# ===============================================================
-from langchain_huggingface import HuggingFaceEmbeddings
-embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-# ===============================================================
-# 💾 Step 4: Load document index with Chroma and apply metadata filter / Index mit Metadatenfilter laden
-# ===============================================================
-from langchain_chroma import Chroma
-vectorstore = Chroma(
-    persist_directory="chroma_store",
-    embedding_function=embedding_model
-)
-
-# ===============================================================
-# 🔁 Step 5: Set up retriever with metadata filtering and multi-query / Retriever mit Filter und Multi-Query erstellen
-# ===============================================================
-from langchain.retrievers.multi_query import MultiQueryRetriever
-retriever = MultiQueryRetriever.from_llm(
-    retriever=vectorstore.as_retriever(
-        search_kwargs={"k": 5, "filter": {"source": "biocomputer_article"}}
-    ),
-    llm=llm
-)
-
-# ===============================================================
-# ✏️ Step 6: Prompt Template / Prompt-Vorlage erstellen
-# ===============================================================
-from langchain.prompts import ChatPromptTemplate
-prompt = ChatPromptTemplate.from_template(
-    """
-    Answer the question using ONLY the following context:
-    Beantworte die Frage NUR anhand des folgenden Kontexts:
-
-    {context}
-
-    Question / Frage: {question}
-    """
-)
-
-# ===============================================================
-# 🧠 Step 7: Setup conversation memory / Dialogspeicher einrichten
-# ===============================================================
-from langchain.memory import ConversationBufferMemory
-from langchain.memory.chat_message_histories import FileChatMessageHistory
-history = FileChatMessageHistory(file_path="chat_history.json")
-memory = ConversationBufferMemory(memory_key="chat_history", chat_memory=history, return_messages=True)
-
-# ===============================================================
-# 🔗 Step 8: Build the RAG chain / RAG-Kette bauen
-# ===============================================================
-from langchain.chains import RunnableWithMessageHistory
+# 🔗 Цепочка с использованием памяти
 chain = (
-    {"context": lambda x: retriever.invoke(x["question"]), "question": lambda x: x["question"]}
-    | prompt
+    RunnableLambda(lambda x: {
+        "context": retriever.get_relevant_documents(x["question"]),
+        "question": x["question"],
+        "chat_history": memory.load_memory_variables({})["chat_history"]
+    })
+    | (lambda x: prompt.format(**x))
     | llm
 )
 
-chat_with_memory = RunnableWithMessageHistory(
-    chain,
-    lambda session_id: memory,
-    input_messages_key="question",
-    history_messages_key="chat_history"
-)
-
-# ===============================================================
-# 📊 Step 9: Tracing with LangSmith / Nachverfolgung aktivieren
-# ===============================================================
-from langchain_core.tracers import LangChainTracer
-tracer = LangChainTracer()
-
-# ===============================================================
-# 💬 Step 10: Interactive Q&A Loop / Interaktives Frage-Antwort-Menü
-# ===============================================================
-print("\U0001F50D Enter your question (or type 'exit' to quit):")
-print("\U0001F50D Gib deine Frage ein (oder tippe 'exit' zum Beenden):")
-
+# 💬 Интерактивный режим
+print("🔎 Введите вопрос (или 'выход' для завершения):")
 while True:
-    question = input("\n\U0001F9E0 Your question / Deine Frage: ")
-    if question.lower() in ["exit", "quit"]:
-        print("\U0001F44B Goodbye! / Auf Wiedersehen!")
+    question = input("\n🧠 Ваш вопрос: ")
+    if question.lower() in ["выход", "exit", "quit"]:
+        print("👋 До встречи!")
         break
+    
+    # Создаём трассировщик
+    tracer = LangChainTracer()
+    
+    # Запуск с трассировкой
+    result = chain.invoke(
+    {"question": question},
+    config={"callbacks": [tracer]})
+    print("📄 Ответ:", result.content)
 
-    result = chat_with_memory.invoke(
-        {"question": question},
-        config={"configurable": {"session_id": "user"}, "callbacks": [tracer]}
-    )
-
-    print("\U0001F4C4 Answer / Antwort:", result.content)
+    # Добавляем в память вручную (симулируем сохранение истории)
+    memory.chat_memory.add_user_message(question)
+    memory.chat_memory.add_ai_message(result.content)
