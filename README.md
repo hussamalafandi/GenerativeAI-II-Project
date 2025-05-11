@@ -1,56 +1,150 @@
-# Homework Project: Build a RAG (Retrieval-Augmented Generation) System
 
-## Objective
-Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves information from an external document source and uses it to answer questions. This will demonstrate how language models can be grounded in up-to-date, domain-specific knowledge.
+# Gemini Project 2025 🌌
 
-> The chosen model has a knowledge cutoff in **August 2024**, so answers to recent topics must rely on **retrieved documents**, not internal model knowledge.
+An advanced natural language processing (NLP) pipeline for interactive document retrieval, conversation management, and knowledge extraction, using **LangChain**, **Google PaLM (Gemini-2.0-flash)**, and **ChromaDB**. This project leverages multi-turn dialogue management, custom embeddings, and graph-based conversation visualization.
 
 ---
 
-## Core Requirements
+## **📝 Project Overview**
 
-### 1. Document Indexing
-- Use **Chromadb** with **persistence enabled**.
-- Choose a document of an event that happend after **August 2024**
-- Include document **splitting** (≥ 50 chunks) using appropriate text splitting strategies.
+This project implements a full pipeline for document-based question answering using **LangChain**, **LangSmith**, and **ChromaDB**. It features:
 
-### 2. System Components
-- Use `gemini-2.0-flash`
-- Implement with **LangChain** or **LlamaIndex**.  
-- Use **LangSmith** or **LangFuse**.  
-- Use **Git and GitHub** for version control.
-- Don not use pre-built agents.
-- **Dialog flow** (multi-turn interaction)  
-- **Memory** (context tracking across interactions)  
-
-### 3. Experimentation  
-- Compare **system prompts** and their effects on model behavior.  
-- Use a variety of **questions** to evaluate system robustness (at leat 5 different questions with correct answers).
-
-### 4. Reproducibility  
-- Submit your code via **GitHub**.  
-- Use a clean repository:  
-  - ❌ **No large files** in git history  
-  - ❌ **No secret tokens** in commit history
-
-### 5. Submission  
-- **Deadline:** `11.05 at 23:59`  
-- **Deliverables:**
-  - GitHub repo link
-  - Link to your **LangSmith** or **LangFuse** project.
-  - Jupyter notebook or script demonstrating:
-    - Index creation
-    - Retrieval
-    - Answer generation
-    - Prompt variations
+- Document chunking and indexing with ChromaDB
+- Real-time conversation memory
+- Multi-query retrieval
+- Graph-based conversation flow visualization
+- Chat history export in both plain text and JSON formats
 
 ---
 
-## Bonus Features (Optional, for Extra Credit)
+## **📦 Installation**
 
-Implement one or more of the following to enhance your RAG system:
+Ensure you have the required libraries installed:
 
-- ✅ **Metadata filtering** during document retrieval  
-- ✅ **Multi-Query retrieval** (ask multiple questions or rephrase to get better context)
+```bash
+pip install -qU "langchain[google-genai]" chromadb networkx matplotlib
+pip install langchain-community
+pip install -qU sentence-transformers transformers langchain-huggingface langchain-chroma langchain
+```
 
 ---
+
+## **🚀 How It Works**
+
+1. **Document Indexing:**
+   - Downloads a news article.
+   - Splits it into at least 50 chunks using **RecursiveCharacterTextSplitter**.
+   - Indexes the chunks using **ChromaDB** with persistent storage.
+
+2. **Conversation Management:**
+   - Handles multi-turn interactions using **ConversationBufferMemory**.
+   - Tracks user inputs and AI responses for context-aware conversations.
+
+3. **Graph-Based Visualization:**
+   - Builds a directed graph of user questions and AI responses.
+   - Visualizes the conversation flow for better insight into model behavior.
+
+4. **Chat History Export:**
+   - Saves conversation history in **chat_history.txt** (plain text) and **chat_history.json** (structured JSON).
+
+---
+
+## **🛠️ Setup and Configuration**
+
+### **🔑 API Keys**
+Make sure you have the following environment variables set:
+
+- **LANGSMITH_API_KEY** (required)
+- **GOOGLE_API_KEY** (required)
+
+The script will prompt you to enter these keys if they are not set.
+
+---
+
+## **📝 Code Structure**
+
+### **1. Environment Setup and Imports**
+- Imports essential libraries.
+- Sets environment variables for LangSmith tracing.
+
+### **2. Document Download and Chunking**
+- Downloads the target article.
+- Splits it into manageable chunks.
+
+### **3. ChromaDB Initialization**
+- Creates a ChromaDB instance for efficient document retrieval.
+
+### **4. Language Model Initialization**
+- Initializes the **Gemini-2.0-flash** model for NLP tasks.
+
+### **5. Retrieval Chain Initialization**
+- Configures the document retriever for accurate response generation.
+
+### **6. Conversation Management**
+- Sets up conversation memory to track multi-turn interactions.
+
+### **7. Graph-Based Flow Visualization**
+- Creates a directed graph to visualize conversation flow.
+
+### **8. Chat History Export**
+- Saves chat history to both text and JSON formats for analysis.
+
+---
+
+## **📝 Sample Questions**
+
+The code includes sample questions to test the system:
+
+- **What was the main reason for Friedrich Merz's defeat?**
+- **How did the German parliament react to the vote?**
+- **What impact will this have on German politics?**
+- **Were there any unexpected outcomes from this vote?**
+- **What were the main political alliances mentioned in the article?**
+
+---
+
+## **📊 Graph Visualization**
+
+The conversation flow is visualized using **NetworkX** and **matplotlib**, providing a clear, graphical representation of user and AI interactions.
+
+---
+
+## **📂 Saving Chat History**
+
+Chat history is automatically saved to:
+
+- **chat_history.txt** (plain text)
+- **chat_history.json** (structured JSON)
+
+Both files are created in the current working directory.
+
+---
+
+## **📝 Future Improvements**
+
+- Add support for richer conversation context.
+- Integrate confidence scoring for AI responses.
+- Implement response ranking for better answer quality.
+- Optimize graph layout for clearer conversation flows.
+
+---
+
+## **🧑‍💻 Contributing**
+
+Feel free to fork this repository, submit pull requests, and share your ideas for improvement.
+
+---
+
+## **📝 License**
+
+This project is licensed under the MIT License.
+
+---
+
+## **❤️ Acknowledgements**
+
+Special thanks to the **LangChain**, **ChromaDB**, and **Google PaLM** teams for their powerful tools and libraries.
+
+---
+
+Enjoy building with the power of Gemini! 🚀
