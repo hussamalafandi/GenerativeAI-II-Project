@@ -16,8 +16,8 @@ Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves infor
 
 ### 2. System Components
 - Use `gemini-2.0-flash`
-- Implement with **LangChain** or **LlamaIndex**.  
-- Use **LangSmith** or **LangFuse**.  
+- Implement with **LangChain**.  
+- Use **LangSmith**.  
 - Use **Git and GitHub** for version control.
 - Don not use pre-built agents.
 - **Dialog flow** (multi-turn interaction)  
@@ -37,7 +37,8 @@ Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves infor
 - **Deadline:** `11.05 at 23:59`  
 - **Deliverables:**
   - GitHub repo link
-  - Link to your **LangSmith** or **LangFuse** project.
+  - Link to your **LangSmith** project.
+  -https://smith.langchain.com/o/5120f270-3ba5-4dfc-8470-ea977d51210b/dashboards/projects/03ce872f-eb45-4ac9-a388-ccbd115bf83e
   - Jupyter notebook or script demonstrating:
     - Index creation
     - Retrieval
