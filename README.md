@@ -1,71 +1,123 @@
-# 🧠 Homework Project: Build a RAG (Retrieval-Augmented Generation) System
 
-## 📌 Objective
+# Homework Project: Build a RAG (Retrieval-Augmented Generation) System
 
-The goal of this project is to build a **Retrieval-Augmented Generation (RAG)** system that fetches information from external documents and uses it to answer user questions. This project demonstrates how to ground a language model in real-world, up-to-date knowledge.
+## Objective
+Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves information from an external document source and uses it to answer questions. This will demonstrate how language models can be grounded in up-to-date, domain-specific knowledge.
 
-> 💡 **Note:** The selected model has a knowledge cutoff in **August 2024**. Your system must use **retrieved documents** to correctly answer questions about **events occurring after this date**.
+> The chosen model has a knowledge cutoff in **August 2024**, so answers to recent topics must rely on **retrieved documents**, not internal model knowledge.
 
 ---
 
-## 🛠️ Core Requirements
+## Core Requirements
 
 ### 1. Document Indexing
-- Use **ChromaDB** with **persistence enabled**.
-- Select a document describing an event that happened **after August 2024**.
-- Split the document into **at least 50 chunks** using appropriate text splitting strategies.
+- Use **Chromadb** with **persistence enabled**.
+- Choose a document of an event that happend after **August 2024**
+- Include document **splitting** (≥ 50 chunks) using appropriate text splitting strategies.
 
-### 2. System Architecture
-- Use the model: `gemini-2.0-flash`
-- Implement the pipeline using:
-  - **LangChain** or **LlamaIndex**
-  - **LangSmith** or **LangFuse** for observability and tracing
-- Version control your code with **Git and GitHub**
-- **Do not use pre-built agents**
-- Implement:
-  - 🗣️ **Dialog flow** (multi-turn interaction)
-  - 🧠 **Memory** (to track context across messages)
+### 2. System Components
+- Use `gemini-2.0-flash`
+- Implement with **LangChain** or **LlamaIndex**.  
+- Use **LangSmith** or **LangFuse**.  
+- Use **Git and GitHub** for version control.
+- Don not use pre-built agents.
+- **Dialog flow** (multi-turn interaction)  
+- **Memory** (context tracking across interactions)  
 
-### 3. Experimentation and Effectiveness Testing
-- Create **at least 5 meaningful questions** that the system should answer using the retrieved document.
-- The questions **must not be answerable** by the language model alone.
-- Validate that the system answers correctly **only when using retrieval**.
-- Compare and document the impact of different **system prompts** on model behavior.
+### 3. Experimentation  
+- Compare **system prompts** and their effects on model behavior.  
+- Use a variety of **questions** to evaluate system robustness (at leat 5 different questions with correct answers).
 
-### 4. Reproducibility & Clean Code Practices
-- Use a clean GitHub repository:
-  - ❌ No **large files** in git history
-  - ❌ No **secret tokens** in commit history
-- Your code should be:
-  - Well-documented
-  - Easy to run
-  - Clearly structured
+### 4. Reproducibility  
+- Submit your code via **GitHub**.  
+- Use a clean repository:  
+  - ❌ **No large files** in git history  
+  - ❌ **No secret tokens** in commit history
 
----
-
-## 🚀 Submission Instructions
-
-- **Deadline:** `11.05 at 23:59`
-- Each student has a dedicated branch named after them.
-- Open a **Pull Request (PR)** from your working branch **to your assigned branch** in this repository.
-- Your PR must include:
-  - ✅ Your full implementation code
-  - ✅ A Jupyter notebook or script showing:
-    - Document indexing
-    - Retrieval steps
-    - Question answering
-    - Prompt variations and experiments
-  - ✅ Link to your **LangSmith** or **LangFuse** project
+### 5. Submission  
+- **Deadline:** `11.05 at 23:59`  
+- **Deliverables:**
+  - GitHub repo link
+  - Link to your **LangSmith** or **LangFuse** project.
+  - Jupyter notebook or script demonstrating:
+    - Index creation
+    - Retrieval
+    - Answer generation
+    - Prompt variations
 
 ---
 
-## ⭐ Bonus (Mandatory for Extra Credit)
+## Bonus Features (Optional, for Extra Credit)
 
-To earn bonus points, your system must implement **both** of the following features:
+Implement one or more of the following to enhance your RAG system:
 
-- 🔍 **Metadata filtering** to refine document retrieval
-- 🔁 **Multi-Query retrieval** (e.g., query rephrasing or multiple simultaneous questions to improve answer quality)
+- ✅ **Metadata filtering** during document retrieval  
+- ✅ **Multi-Query retrieval** (ask multiple questions or rephrase to get better context)
+
+---
+=======
+# 🤖 GenerativeAI-II-Projekt: RAG mit Gemini 2 & LangChain
+
+## 📝 Projektbeschreibung
+
+Dieses Projekt implementiert ein **RAG-System (Retrieval-Augmented Generation)** mit **Gemini 2 (Google)** und der **LangChain**-Bibliothek. Es lädt Artikel aus dem Web, extrahiert relevante Informationen, vektorisiert die Inhalte und ermöglicht dialogbasierte Antworten auf Deutsch.
 
 ---
 
-Happy building! 🚀
+## 🔧 Installationsanleitung
+
+### 1. ✅ Abhängigkeiten installieren
+
+```bash
+pip install -q langchain langchain-community langchain-google-genai langgraph chromadb
+
+2. ✅ Umgebungsvariablen setzen
+import os
+from getpass import getpass
+
+os.environ["LANGCHAIN_API_KEY"] = getpass("🔑 LangSmith API Key eingeben: ")
+os.environ["LANGCHAIN_PROJECT"] = "RAG.2025"
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["GOOGLE_API_KEY"] = getpass("🔑 Google API Key (Gemini) eingeben: ")
+os.environ["USER_AGENT"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0.0.0 Safari/537.36"
+
+🔍 Datenquelle
+Das System lädt Inhalte von dieser URL (Webartikel):
+https://www.astromind.de/astrologie-artikel/r%C3%BCcklaeufiger-mars.html
+
+
+🧠 Was passiert im Code?
+🔹 Laden & Aufteilen: Webseite wird geladen, in kleine Texte (Chunks) zerlegt.
+
+🔹 Vektorisierung: Jeder Chunk wird mittels HuggingFace-Embedding in einen Vektor umgewandelt.
+
+🔹 Speicherung: Die Vektoren werden lokal in einer chroma_db gespeichert.
+
+🔹 Speicher: Gesprächsverlauf wird in chat_history.json gespeichert.
+
+🔹 Retrieval: Mehrere Suchanfragen pro Frage werden erzeugt.
+
+🔹 Antwortgenerierung: Die Antwort basiert auf Dokumentinhalten und Gesprächskontext.
+
+🤖 Modell & Tools
+LLM: Gemini 2.0 Flash von Google
+
+Retriever: MultiQueryRetriever aus LangChain
+
+Prompt: Eingebunden von LangChain Hub (rlm/rag-prompt)
+
+Tracer: Aktiv für LangSmith zur Nachverfolgung.
+
+🚀 Ausführung (Beispiel)
+state = {"question": "frage ?"}
+result = graph.invoke(state)
+print("📍Antwort:", result["answer"])
+
+
+👤 Autorin
+Alona Tkachenko
+🔗 GitHub: altkachenko11
+🔗 **LangSmith Projekt-Tracking:**  
+[smith.langchain.com Projekt-Link](https://smith.langchain.com/o/75759cbe-275f-4bca-8856-b15c344abcf9/projects/p/47040df8-9915-40ae-90be-a6c0a66d0b52?timeModel=%7B%22duration%22%3A%227d%22%7D)
+
+
