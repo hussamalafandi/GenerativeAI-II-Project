@@ -1,71 +1,78 @@
-# 🧠 Homework Project: Build a RAG (Retrieval-Augmented Generation) System
+# 🧠 GenerativeAI-II Project: Retrieval-Augmented Question Answering with Gemini
 
-## 📌 Objective
+This project demonstrates how to build a Retrieval-Augmented Generation (RAG) system using ChromaDB, Gemini (Google Generative AI), and LangChain with conversational memory.
 
-The goal of this project is to build a **Retrieval-Augmented Generation (RAG)** system that fetches information from external documents and uses it to answer user questions. This project demonstrates how to ground a language model in real-world, up-to-date knowledge.
+## 📚 Project Objective
 
-> 💡 **Note:** The selected model has a knowledge cutoff in **August 2024**. Your system must use **retrieved documents** to correctly answer questions about **events occurring after this date**.
-
----
-
-## 🛠️ Core Requirements
-
-### 1. Document Indexing
-- Use **ChromaDB** with **persistence enabled**.
-- Select a document describing an event that happened **after August 2024**.
-- Split the document into **at least 50 chunks** using appropriate text splitting strategies.
-
-### 2. System Architecture
-- Use the model: `gemini-2.0-flash`
-- Implement the pipeline using:
-  - **LangChain** or **LlamaIndex**
-  - **LangSmith** or **LangFuse** for observability and tracing
-- Version control your code with **Git and GitHub**
-- **Do not use pre-built agents**
-- Implement:
-  - 🗣️ **Dialog flow** (multi-turn interaction)
-  - 🧠 **Memory** (to track context across messages)
-
-### 3. Experimentation and Effectiveness Testing
-- Create **at least 5 meaningful questions** that the system should answer using the retrieved document.
-- The questions **must not be answerable** by the language model alone.
-- Validate that the system answers correctly **only when using retrieval**.
-- Compare and document the impact of different **system prompts** on model behavior.
-
-### 4. Reproducibility & Clean Code Practices
-- Use a clean GitHub repository:
-  - ❌ No **large files** in git history
-  - ❌ No **secret tokens** in commit history
-- Your code should be:
-  - Well-documented
-  - Easy to run
-  - Clearly structured
+The goal is to answer user questions based on a real-world document about events after **August 2024** using retrieval-based context. The model alone doesn't have access to this knowledge and must rely on indexed documents.
 
 ---
 
-## 🚀 Submission Instructions
+## ✅ Core Features
 
-- **Deadline:** `11.05 at 23:59`
-- Each student has a dedicated branch named after them.
-- Open a **Pull Request (PR)** from your working branch **to your assigned branch** in this repository.
-- Your PR must include:
-  - ✅ Your full implementation code
-  - ✅ A Jupyter notebook or script showing:
-    - Document indexing
-    - Retrieval steps
-    - Question answering
-    - Prompt variations and experiments
-  - ✅ Link to your **LangSmith** or **LangFuse** project
+- 🔍 **Document Indexing** with ChromaDB and HuggingFace Embeddings
+- 🤖 **LLM** using `gemini-2.0-flash` from Google Generative AI
+- 🔗 **LangChain Pipeline** (no agents used)
+- 💬 **Multi-turn dialogue** with conversational memory
+- 📦 **Persistence** of vector store
+- 🧪 **Traceability** via LangSmith
 
 ---
 
-## ⭐ Bonus (Mandatory for Extra Credit)
+## 📁 File Structure
 
-To earn bonus points, your system must implement **both** of the following features:
+GenerativeAI-II-Project/ ├── .env ├── requirements.txt ├── indexing.py # Indexes document chunks to ChromaDB ├── qa_chain.py # Main interactive chatbot script with memory ├── chroma_store/ # Folder where ChromaDB persists data └── biocomputer_article.txt # Source document
 
-- 🔍 **Metadata filtering** to refine document retrieval
-- 🔁 **Multi-Query retrieval** (e.g., query rephrasing or multiple simultaneous questions to improve answer quality)
+
 
 ---
 
-Happy building! 🚀
+## ⚙️ Setup
+
+### 1. Clone and create virtual environment:
+
+```bash
+git clone https://github.com/yourusername/GenerativeAI-II-Project.git
+cd GenerativeAI-II-Project
+python -m venv rag_env_310
+.\rag_env_310\Scripts\activate
+pip install -r requirements.txt
+2. Set up .env with your API keys:
+ini
+GOOGLE_API_KEY=your_google_api_key
+LANGSMITH_API_KEY=your_langsmith_key
+LANGCHAIN_PROJECT=RAG-Chat-Memory
+🚀 How to Run
+Step 1: Index the document
+python indexing.py
+This will split your document into chunks and store them with embeddings in ChromaDB.
+
+Step 2: Start the chatbot
+
+python qa_chain.py
+Then simply enter your questions in the terminal.
+
+🧠 Example Questions
+Who created the biocomputer?
+
+When was it first introduced?
+
+What does this mean for the future of AI?
+
+📈 Bonus Features
+✅ Conversational memory
+✅ LangSmith tracing
+❌ (Optional features like metadata filtering and multi-query not included in final version)
+
+🔗 LangSmith Trace Example
+Visit: https://smith.langchain.com and find the project RAG-Chat-Memory.
+
+🧼 Clean Code Checklist
+ No API keys committed
+
+ .env listed in .gitignore
+
+ Code modular and documented
+
+ No large files in Git history
+
