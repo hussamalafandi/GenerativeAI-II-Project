@@ -1,50 +1,57 @@
-# indexing.py — индексирование документа в ChromaDB с persistence
+# =============================
+# 📄 Document Indexing Script
+# =============================
 
 import os
-from langchain_community.vectorstores import Chroma
-# from langchain_community.embeddings import OpenAIEmbeddings
-from langchain_community.embeddings import HuggingFaceEmbeddings
+import shutil
+from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
-from dotenv import load_dotenv
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_chroma import Chroma
 
-# 🔐 Загрузка API-ключей
+# -----------------------------
+# 1. Load environment variables
+# -----------------------------
 load_dotenv()
 
-# 📄 Загружаем текст документа (предположим, он лежит в .txt)
-with open("./data/brain_article.txt", "r", encoding="cp1252") as file:
+# -----------------------------
+# 2. Clean up previous index
+# -----------------------------
+if os.path.exists("chroma_store"):
+    shutil.rmtree("chroma_store")
+    print("🧹 Removed old ChromaDB index.")
+
+# -----------------------------
+# 3. Load document (news article)
+# -----------------------------
+with open("brain_article.txt", "r", encoding="cp1252") as file:
     raw_text = file.read()
 
-# 🔹 Разделение текста на чанки
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=500,
-    chunk_overlap=100,
-    length_function=len,
-    separators=["\n\n", "\n", ".", " "]
-)
-chunks = text_splitter.split_text(raw_text)
+# -----------------------------
+# 4. Split into chunks
+# -----------------------------
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+texts = text_splitter.split_text(raw_text)
 
-# 🧱 Преобразуем чанки в объекты Document с метаданными
-source_metadata = {
-    "source": "newatlas.com",
-    "date": "2025-03-03",
-    "title": "World's first Synthetic Biological Intelligence runs on living human cells",
-    "author": "Bronwyn Thompson"
-}
-documents = [Document(page_content=chunk, metadata=source_metadata) for chunk in chunks]
+# Wrap with metadata
+documents = [Document(page_content=t, metadata={"source": "biocomputer_article"}) for t in texts]
 
-# 🧠 Создаём эмбеддинги
+print(f"✅ Split into {len(documents)} chunks.")
+
+# -----------------------------
+# 5. Create embedding model
+# -----------------------------
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-# embedding_model = OpenAIEmbeddings()
 
-
-# Создаём ChromaDB с persistence
-vectorstore = Chroma(persist_directory="chroma_store", embedding_function=embedding_model)
-
-# ➕ Добавляем документы
+# -----------------------------
+# 6. Store in ChromaDB with persistence
+# -----------------------------
+vectorstore = Chroma(
+    persist_directory="chroma_store",
+    embedding_function=embedding_model
+)
 vectorstore.add_documents(documents)
-
-# 💾 Сохраняем индекс на диск
 vectorstore.persist()
 
-print(f"✅ Загружено и проиндексировано {len(documents)} чанков.")
+print("✅ Indexed and persisted successfully.")
