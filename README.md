@@ -1,5 +1,3 @@
-# 🧠 GenerativeAI-II Project: Retrieval-Augmented Question Answering with Gemini
-
 This project demonstrates how to build a Retrieval-Augmented Generation (RAG) system using ChromaDB, Gemini (Google Generative AI), and LangChain with conversational memory.
 
 ## 📚 Project Objective
@@ -21,9 +19,15 @@ The goal is to answer user questions based on a real-world document about events
 
 ## 📁 File Structure
 
-GenerativeAI-II-Project/ ├── .env ├── requirements.txt ├── indexing.py # Indexes document chunks to ChromaDB ├── qa_chain.py # Main interactive chatbot script with memory ├── chroma_store/ # Folder where ChromaDB persists data └── biocomputer_article.txt # Source document
-
-
+```
+GenerativeAI-II-Project/
+├── .env
+├── requirements.txt
+├── indexing.py         # Indexes document chunks to ChromaDB
+├── qa_chain.py         # Main interactive chatbot script with memory
+├── chroma_store/       # Folder where ChromaDB persists data
+└── biocomputer_article.txt  # Source document
+```
 
 ---
 
@@ -35,44 +39,74 @@ GenerativeAI-II-Project/ ├── .env ├── requirements.txt ├── ind
 git clone https://github.com/yourusername/GenerativeAI-II-Project.git
 cd GenerativeAI-II-Project
 python -m venv rag_env_310
-.\rag_env_310\Scripts\activate
+.
+ag_env_310\Scriptsctivate
 pip install -r requirements.txt
-2. Set up .env with your API keys:
-ini
+```
+
+### 2. Set up `.env` with your API keys:
+
+```ini
 GOOGLE_API_KEY=your_google_api_key
 LANGSMITH_API_KEY=your_langsmith_key
 LANGCHAIN_PROJECT=RAG-Chat-Memory
-🚀 How to Run
-Step 1: Index the document
+```
+
+---
+
+## 🚀 How to Run
+
+### Step 1: Index the document
+
+```bash
 python indexing.py
+```
+
 This will split your document into chunks and store them with embeddings in ChromaDB.
 
-Step 2: Start the chatbot
+### Step 2: Start the chatbot
 
+```bash
 python qa_chain.py
+```
+
 Then simply enter your questions in the terminal.
 
-🧠 Example Questions
-Who created the biocomputer?
+---
 
-When was it first introduced?
+## 🧠 Example Questions
 
-What does this mean for the future of AI?
+- Who created the biocomputer?
+- When was it first introduced?
+- What does this mean for the future of AI?
 
-📈 Bonus Features
-✅ Conversational memory
-✅ LangSmith tracing
+---
+
+## 📈 Bonus Features
+
+✅ Conversational memory  
+✅ LangSmith tracing  
 ❌ (Optional features like metadata filtering and multi-query not included in final version)
 
-🔗 LangSmith Trace Example
-Visit: https://smith.langchain.com and find the project RAG-Chat-Memory.
+---
 
-🧼 Clean Code Checklist
- No API keys committed
+## 🔗 LangSmith Trace Example
 
- .env listed in .gitignore
+Visit: [https://smith.langchain.com](https://smith.langchain.com) and find the project `RAG-Chat-Memory`.
 
- Code modular and documented
+---
 
- No large files in Git history
+## 🧼 Clean Code Checklist
 
+- [x] No API keys committed
+- [x] `.env` listed in `.gitignore`
+- [x] Code modular and documented
+- [x] No large files in Git history
+
+---
+
+## 📅 Deadline
+
+Submission: **11.05, 23:59**
+
+Good luck! 🚀
