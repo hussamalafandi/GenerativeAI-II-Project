@@ -1,4 +1,4 @@
-# qa_chain.py — интерактивный чат с базой через ChromaDB + Gemini
+# qa_chain.py — интерактивный чат с базой через ChromaDB + Gemini (RAG с памятью через ConversationBufferMemory и интерактивным диалогом)
 
 import os
 from dotenv import load_dotenv
@@ -7,6 +7,7 @@ from langchain_core.runnables import RunnableLambda
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.memory import ConversationBufferMemory
 
 # 🔐 Загрузка переменных из .env
 load_dotenv()
@@ -19,15 +20,22 @@ vectorstore = Chroma(
 )
 retriever = vectorstore.as_retriever()
 
-# 📜 Шаблон генерации с контекстом
+# 🧠 Инициализация памяти
+memory = ConversationBufferMemory(
+    return_messages=True,
+    memory_key="chat_history"
+)
+
+# 📜 Шаблон генерации с контекстом и историей
 prompt = PromptTemplate.from_template("""
-Используй следующий контекст, чтобы ответить на вопрос.
-Если ответ не содержится в контексте — скажи честно, что не знаешь.
+Используй следующий контекст и историю диалога, чтобы ответить на вопрос.
+Если ответа нет в контексте — честно скажи, что не знаешь.
+
+История:
+{chat_history}
 
 Контекст:
----------
 {context}
----------
 
 Вопрос: {question}
 Ответ:
@@ -40,11 +48,12 @@ llm = ChatGoogleGenerativeAI(
     temperature=0.3
 )
 
-# 🔗 Цепочка: получение контекста → шаблон → модель
+# 🔗 Цепочка с использованием памяти
 chain = (
     RunnableLambda(lambda x: {
         "context": retriever.get_relevant_documents(x["question"]),
-        "question": x["question"]
+        "question": x["question"],
+        "chat_history": memory.load_memory_variables({})["chat_history"]
     })
     | (lambda x: prompt.format(**x))
     | llm
@@ -57,5 +66,10 @@ while True:
     if question.lower() in ["выход", "exit", "quit"]:
         print("👋 До встречи!")
         break
+
     result = chain.invoke({"question": question})
     print("📄 Ответ:", result.content)
+
+    # Добавляем в память вручную (симулируем сохранение истории)
+    memory.chat_memory.add_user_message(question)
+    memory.chat_memory.add_ai_message(result.content)
