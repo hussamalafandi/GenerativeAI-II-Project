@@ -1,10 +1,9 @@
 # indexing.py — индексирование документа в ChromaDB с persistence
 
 import os
-from langchain.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.llms import OpenAI
-from langchain.chains import RetrievalQA
+from langchain_community.vectorstores import Chroma
+# from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 from dotenv import load_dotenv
@@ -13,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 📄 Загружаем текст документа (предположим, он лежит в .txt)
-with open("./data/brain_article.txt", "r", encoding="utf-8") as file:
+with open("./data/brain_article.txt", "r", encoding="cp1252") as file:
     raw_text = file.read()
 
 # 🔹 Разделение текста на чанки
@@ -28,13 +27,15 @@ chunks = text_splitter.split_text(raw_text)
 # 🧱 Преобразуем чанки в объекты Document с метаданными
 source_metadata = {
     "source": "newatlas.com",
-    "date": "2024-09-18",
-    "title": "Cortical Bioengineered Intelligence"
+    "date": "2025-03-03",
+    "title": "World's first Synthetic Biological Intelligence runs on living human cells",
+    "author": "Bronwyn Thompson"
 }
 documents = [Document(page_content=chunk, metadata=source_metadata) for chunk in chunks]
 
 # 🧠 Создаём эмбеддинги
-embedding_model = OpenAIEmbeddings()
+embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+# embedding_model = OpenAIEmbeddings()
 
 
 # Создаём ChromaDB с persistence
