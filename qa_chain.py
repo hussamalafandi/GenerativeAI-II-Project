@@ -8,6 +8,8 @@ from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.memory import ConversationBufferMemory
+from langsmith import traceable
+from langchain_core.tracers import LangChainTracer
 
 # 🔐 Загрузка переменных из .env
 load_dotenv()
@@ -66,8 +68,14 @@ while True:
     if question.lower() in ["выход", "exit", "quit"]:
         print("👋 До встречи!")
         break
-
-    result = chain.invoke({"question": question})
+    
+    # Создаём трассировщик
+    tracer = LangChainTracer()
+    
+    # Запуск с трассировкой
+    result = chain.invoke(
+    {"question": question},
+    config={"callbacks": [tracer]})
     print("📄 Ответ:", result.content)
 
     # Добавляем в память вручную (симулируем сохранение истории)
