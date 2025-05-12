@@ -1,0 +1,37 @@
+# Core
+chromadb #>=4.15
+langchain>=0.1.0
+langgraph
+sentence-transformers>=2.6.0
+
+# Embedding and retrieval
+faiss-cpu #>=1.7.4 or faiss-gpu, when CUDA
+
+# Support OpenAI models (GPT)
+langchain-openai
+openai 
+google-generativeai>=0.3.0
+langchain-google-genai
+
+# Additional community-integrations (tools, retrievers и т.д.)
+langchain-community
+
+# web-search (for instance, Tavily)
+tavily-python
+
+# utilities (optional)
+langsmith>=0.1.0  # log
+python-dotenv>=1.0.0  # loading API-Keys from .env
+requests>=2.31.0
+tqdm>=4.66.0
+
+langchainhub
+
+#pip install google-ai-generativelanguage==0.6.15
+#pip install --upgrade --force-reinstall google-generativeai langchain-google-genai
+
+
+
+
+
+
