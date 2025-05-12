@@ -1,0 +1,26 @@
+Lesson 10 + Part 1
+step1: analyze_query
+step2: retrieve
+step3: generate
+
+
+1. Artikel > Aug.2024
+2. Gemini-2.0-flash
+3. Chromadb mit persistence
+4. Text-Split (min. 50 Split)
+5. Langsmith oder Langfuse (langfuse.com)
+6. Langchain oder LlamaIndex
+7. Git und GitHub
+8. Experiment with different questions (>5)
+9. Experiment with different system prompts
+10. No pre-built Agents
+11. deadline 11.05 23:00
+
+12. Dialog
+13. Memory 
+14. Query Rewriting (query analysis: )
+15. Metdata
+16. Multi-Query (RAG from Scratch/RAG_from_scratch_5_to_9.ipynb)
+
+17. No lang Files in Git History
+18. No Tokens in commentar History
