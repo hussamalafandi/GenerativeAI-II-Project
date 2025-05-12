@@ -1,56 +1,112 @@
-# Homework Project: Build a RAG (Retrieval-Augmented Generation) System
+This project demonstrates how to build a Retrieval-Augmented Generation (RAG) system using ChromaDB, Gemini (Google Generative AI), and LangChain with conversational memory.
 
-## Objective
-Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves information from an external document source and uses it to answer questions. This will demonstrate how language models can be grounded in up-to-date, domain-specific knowledge.
+## 📚 Project Objective
 
-> The chosen model has a knowledge cutoff in **August 2024**, so answers to recent topics must rely on **retrieved documents**, not internal model knowledge.
-
----
-
-## Core Requirements
-
-### 1. Document Indexing
-- Use **Chromadb** with **persistence enabled**.
-- Choose a document of an event that happend after **August 2024**
-- Include document **splitting** (≥ 50 chunks) using appropriate text splitting strategies.
-
-### 2. System Components
-- Use `gemini-2.0-flash`
-- Implement with **LangChain** or **LlamaIndex**.  
-- Use **LangSmith** or **LangFuse**.  
-- Use **Git and GitHub** for version control.
-- Don not use pre-built agents.
-- **Dialog flow** (multi-turn interaction)  
-- **Memory** (context tracking across interactions)  
-
-### 3. Experimentation  
-- Compare **system prompts** and their effects on model behavior.  
-- Use a variety of **questions** to evaluate system robustness (at leat 5 different questions with correct answers).
-
-### 4. Reproducibility  
-- Submit your code via **GitHub**.  
-- Use a clean repository:  
-  - ❌ **No large files** in git history  
-  - ❌ **No secret tokens** in commit history
-
-### 5. Submission  
-- **Deadline:** `11.05 at 23:59`  
-- **Deliverables:**
-  - GitHub repo link
-  - Link to your **LangSmith** or **LangFuse** project.
-  - Jupyter notebook or script demonstrating:
-    - Index creation
-    - Retrieval
-    - Answer generation
-    - Prompt variations
+The goal is to answer user questions based on a real-world document about events after **August 2024** using retrieval-based context. The model alone doesn't have access to this knowledge and must rely on indexed documents.
 
 ---
 
-## Bonus Features (Optional, for Extra Credit)
+## ✅ Core Features
 
-Implement one or more of the following to enhance your RAG system:
-
-- ✅ **Metadata filtering** during document retrieval  
-- ✅ **Multi-Query retrieval** (ask multiple questions or rephrase to get better context)
+- 🔍 **Document Indexing** with ChromaDB and HuggingFace Embeddings
+- 🤖 **LLM** using `gemini-2.0-flash` from Google Generative AI
+- 🔗 **LangChain Pipeline** (no agents used)
+- 💬 **Multi-turn dialogue** with conversational memory
+- 📦 **Persistence** of vector store
+- 🧪 **Traceability** via LangSmith
 
 ---
+
+## 📁 File Structure
+
+```
+GenerativeAI-II-Project/
+├── .env
+├── requirements.txt
+├── indexing.py         # Indexes document chunks to ChromaDB
+├── qa_chain.py         # Main interactive chatbot script with memory
+├── chroma_store/       # Folder where ChromaDB persists data
+└── biocomputer_article.txt  # Source document
+```
+
+---
+
+## ⚙️ Setup
+
+### 1. Clone and create virtual environment:
+
+```bash
+git clone https://github.com/yourusername/GenerativeAI-II-Project.git
+cd GenerativeAI-II-Project
+python -m venv rag_env_310
+.
+ag_env_310\Scriptsctivate
+pip install -r requirements.txt
+```
+
+### 2. Set up `.env` with your API keys:
+
+```ini
+GOOGLE_API_KEY=your_google_api_key
+LANGSMITH_API_KEY=your_langsmith_key
+LANGCHAIN_PROJECT=RAG-Chat-Memory
+```
+
+---
+
+## 🚀 How to Run
+
+### Step 1: Index the document
+
+```bash
+python indexing.py
+```
+
+This will split your document into chunks and store them with embeddings in ChromaDB.
+
+### Step 2: Start the chatbot
+
+```bash
+python qa_chain.py
+```
+
+Then simply enter your questions in the terminal.
+
+---
+
+## 🧠 Example Questions
+
+- Who created the biocomputer?
+- When was it first introduced?
+- What does this mean for the future of AI?
+
+---
+
+## 📈 Bonus Features
+
+✅ Conversational memory  
+✅ LangSmith tracing  
+❌ (Optional features like metadata filtering and multi-query not included in final version)
+
+---
+
+## 🔗 LangSmith Trace Example
+
+Visit: [https://smith.langchain.com](https://smith.langchain.com) and find the project `RAG-Chat-Memory`.
+
+---
+
+## 🧼 Clean Code Checklist
+
+- [x] No API keys committed
+- [x] `.env` listed in `.gitignore`
+- [x] Code modular and documented
+- [x] No large files in Git history
+
+---
+
+## 📅 Deadline
+
+Submission: **11.05, 23:59**
+
+Good luck! 🚀
