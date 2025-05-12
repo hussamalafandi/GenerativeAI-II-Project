@@ -1,0 +1,1099 @@
+# Elektronische Patientenakte (ePA) in Deutschland ab 2025
+
+## LIEBE ÄRZTINNEN UND ÄRZTE,
+
+## LIEBE PSYCHOTHERAPEUTINNEN UND PSYCHOTHERAPEUTEN,
+
+die Einführung der elektronischen Patientenakte (ePA) hat begonnen. Die gesetzlichen Krankenkassen
+haben für alle Versicherten eine Akte angelegt, sofern sie nicht widersprochen haben. Nun wird die ePA in
+den Praxen, Krankenhäusern und Apotheken ausgerollt. Die Nutzung dort ist zunächst freiwillig. Ab 1.
+Oktober 2025 sind Ärzte und Psychotherapeuten verpflichtet, die ePA zu nutzen und mit Arztbriefen,
+Befundberichten und anderen Dokumenten zu befüllen. Dazu gibt es viele Fragen. Die KBV greift sie auf und
+gibt Antworten. Die FAQ-Liste steht auch auf der Internetseite der KBV bereit.
+
+## Einführung und Hintergrund
+Die elektronische Patientenakte (ePA) ist ein zentraler Bestandteil der Digitalisierung des deutschen Gesundheitswesens. Ab dem 15. Januar 2025 wird sie automatisch für alle gesetzlich Versicherten angelegt, sofern kein Widerspruch erfolgt (Opt-out-Verfahren). Ziel ist es, Gesundheitsdaten wie Arztbriefe, Befunde, Laborwerte, Röntgenbilder, Medikationspläne und Impfdaten zentral und sicher zu speichern, um die medizinische Versorgung effizienter, transparenter und patientenzentrierter zu gestalten. Nach Testphasen in Modellregionen (Hamburg, Franken, NRW) beginnt der bundesweite Rollout am 29. April 2025. Ab dem 1. Oktober 2025 wird die Nutzung der ePA für Arztpraxen, Apotheken und Krankenhäuser verpflichtend. Bundesgesundheitsminister Karl Lauterbach betonte, dass die ePA eine „Zeitenwende“ im Gesundheitswesen einleitet, indem sie Doppeluntersuchungen reduziert, Medikationsfehler vermeidet und die Versorgung in Notfällen verbessert.
+
+## Vorteile der ePA
+Die ePA bietet zahlreiche Vorteile:
+- **Patienten**: Sie erhalten über die ePA-App ihrer Krankenkasse Zugriff auf ihre Gesundheitsdaten, können diese einsehen, verwalten oder löschen und Zugriffsrechte für Ärzte oder Vertrauenspersonen (bis zu fünf) vergeben. Dies stärkt die Datensouveränität und fördert die Eigenverantwortung.
+- **Ärzte**: Der schnelle Zugriff auf Patientendaten erleichtert Diagnosen und Behandlungen, insbesondere bei Facharztwechseln oder Krankenhausaufenthalten. Die ePA ergänzt die Anamnese und reduziert den Verwaltungsaufwand.
+- **Gesundheitssystem**: Die Digitalisierung spart Ressourcen, indem sie Papierdokumente ersetzt, Prozesse beschleunigt und die Forschung durch freiwillige Datenspenden (ab Juli 2025) voranbringt.
+Ein Beispiel: In Notfällen können Ärzte sofort auf Notfalldaten (z. B. Allergien, Dauermedikation) zugreifen, auch wenn der Patient nicht ansprechbar ist, sobald mobile Zugriffslösungen verfügbar sind.
+
+## Technische Umsetzung
+Die ePA wird über die Telematikinfrastruktur (TI) betrieben, ein sicheres Netzwerk für den Gesundheitsdatenaustausch. Die Daten werden auf Servern in Deutschland gespeichert, die höchsten Sicherheitsstandards entsprechen, und sind Ende-zu-Ende verschlüsselt. Zugriff erfolgt über:
+- **ePA-App**: Für Smartphones oder Tablets, authentifiziert via elektronischer Gesundheitskarte (eGK) oder Personalausweis-PIN.
+- **Desktop-Client**: Ab Juli 2025 mit Kartenlesegerät der Sicherheitsklasse 2.
+- **Praxisverwaltungssysteme (PVS)**: Ärzte nutzen die eGK für den Zugriff, standardmäßig für 90 Tage.
+Unterstützte Formate umfassen zunächst PDF/A, TXT, XML, P7 und JSON. Größere Dateien (z. B. DICOM-Bilder) sind auf 25 MB begrenzt, wobei Befunde gespeichert werden können. Eine Volltextsuche wird ab März 2026 verfügbar sein.
+
+## Datensicherheit und Kritik
+Datensicherheit ist ein Kernanliegen. Die ePA verwendet eine „Vertrauenswürdige Ausführungsumgebung“ (VAU), und Zugriffe werden drei Jahre protokolliert. Krankenkassen haben keinen Zugriff auf Inhalte. Dennoch gibt es Kritik:
+- **Chaos Computer Club (CCC)**: Wies auf potenzielle Sicherheitslücken hin und forderte robustere Schutzmechanismen.
+- **Datenschützer**: Betonen, dass keine IT-Infrastruktur vollständig sicher ist.
+- **Barrierefreiheit**: Der Sozialverband VdK kritisierte unzureichende Zugänglichkeit für Menschen mit Behinderungen.
+- **Ärzte**: Zwei Drittel waren 2021 skeptisch, da die ePA eine Sekundärdokumentation ist und die Primärdokumentation in Praxen weiterhin erforderlich bleibt.
+Die gematik arbeitet an Lösungen, z. B. einem mobilen Zugriff für Rettungssanitäter, um die Praxistauglichkeit zu erhöhen.
+
+## Inhalte der ePA
+Die ePA speichert:
+- Arztbriefe, Befunde, Laborwerte, Medikationspläne, Impfdaten, Mutterpass, Kinder-Untersuchungsheft, Zahnbonusheft.
+- Elektronische Medikationsliste (eML, ab Juli 2025), die eRezept-Daten integriert.
+- Notfalldaten (z. B. Allergien, Dauerdiagnosen) in der elektronischen Patientenkurzakte (ePKA).
+- Daten aus Digitalen Gesundheitsanwendungen (DiGA) und Forschungsdatenspenden.
+Patienten können Daten selbst einstellen (z. B. Vitaldaten aus Fitness-Apps) oder löschen.
+
+## Rechtliche Rahmenbedingungen
+Das Digitale-Gesetz (DigiG) regelt die ePA:
+- **Pflichten**: Ab Oktober 2025 müssen Ärzte, Apotheker und Krankenhäuser die ePA mit aktuellen Behandlungsdaten befüllen. Bei Verstößen drohen Honorarkürzungen (1 %) oder der Entzug der TI-Pauschale.
+- **Widerspruchsrecht**: Versicherte können der ePA widersprechen (digital, telefonisch, via Ombudsstellen) oder Daten sperren.
+- **Kinder/Jugendliche**: Eltern verwalten die ePA bis zum 15. Lebensjahr, mit Ausnahmen bei therapeutischen oder kindeswohlschützenden Gründen.
+- **Forschungsdatenspende**: Ab Juli 2025 freiwillig möglich.
+
+## FAQs aus PraxisInfoSpezial (KBV, April 2025)
+
+## EINFÜHRUNG DER ELEKTRONISCHEN PATIENTENAKTE
+
+**Ab wann können Praxen die ePA nutzen?**
+
+Die Hersteller von Praxisverwaltungssystemen (PVS) beginnen am 29. April mit dem bundesweiten Rollout
+der ePA-Module. Ärzte und Psychotherapeuten können die ePA freiwillig nutzen, sobald sie das ePA-Modul
+für das PVS erhalten. Einige werden die ePA sofort anwenden können. In anderen Fällen muss das Modul
+noch installiert, freigeschaltet oder erst bereitgestellt werden. Mehr dazu erfahren Praxen bei ihrem PVS-
+Anbieter oder IT-Dienstleister.
+
+**Ist es sinnvoll, die ePA sofort auszuprobieren?**
+
+Praxisteams sollten die Zeit nutzen, um sich mit der ePA vertraut zu machen und die Funktionen zu testen,
+sobald dies technisch möglich ist. So können sie eventuelle Probleme sofort mit ihrem Hersteller klären,
+damit ab 1. Oktober möglichst alles reibungslos läuft. Dann sind sie gesetzlich verpflichtet, die ePA mit
+Arztbriefen, Befundberichten oder Laborberichten zu befüllen.
+
+**Wo können sich Praxen über die ePA informieren?**
+
+Die KBV bietet auf ihrer Internetseite eine Fülle an Informationen. Für alle, die die wichtigsten
+Informationen rund um die ePA gebündelt wünschen, empfiehlt sich das Serviceheft in der Reihe
+PraxisWissen. Ergänzend gibt es einseitige Infoblätter für den täglichen Praxisgebrauch, kurze Erklärvideos
+und Materialien für das Wartezimmer. Auch die Kassenärztlichen Vereinigungen stellen Infomaterialien
+bereit – ebenso die gematik.
+
+**An wen können sich Praxen wenden, wenn sie Fragen zur Funktionsweise der ePA haben?**
+
+Ansprechpartner sollte in dem Fall immer der Hersteller oder der IT-Dienstleister sein, mit dem die Praxis
+zusammenarbeitet. Fehler können auch der gematik gemeldet werden.
+
+**Was ist, wenn mein PVS-Hersteller das ePA-Modul nicht rechtzeitig bereitstellt?**
+
+Praxen sind verpflichtet, ein aktuelles ePA-Modul einzusetzen. Ansonsten werden das Honorar und die TI-
+Pauschale gekürzt. Laut Bundesgesundheitsministerium drohen zumindest in diesem Jahr keine Sanktionen.
+Zudem hat die KBV erreicht, dass Praxen, die kein KOB-zertifiziertes PVS haben, dieses noch bis Jahresende
+für die Abrechnung einsetzen können. Die KBV lehnt jede Form der Sanktionierung der Vertragsärzteschaft
+im Zusammenhang mit Digitalisierungsmaßnahmen im Gesundheitswesen ab. Sie ist vielmehr der
+Auffassung, dass digitale Anwendungen durch ihre Praxistauglichkeit und Nutzerfreundlichkeit die
+Anwender überzeugen müssen und daher deren Einführung keiner Sanktionierung bedarf. Hierfür setzt sich
+die KBV gegenüber dem Ministerium und dem Gesetzgeber weiterhin mit Nachdruck ein.
+
+
+**Was heißt KOB-zertifiziert?**
+
+Die PVS-Hersteller sind verpflichtet, für die ePA 3.0 ihre Software von der gematik zertifizieren zu lassen.
+Nur Systeme, die das Verfahren zur Konformitätsbewertung (KOB) erfolgreich durchlaufen haben, dürfen
+nach einer gesetzlichen Vorgabe weiterhin für die Abrechnung eingesetzt werden. Diesen aus Sicht der KBV
+unhaltbaren Zustand konnte die KBV erfolgreich abwehren. Sie konnte den geschäftsführenden
+Bundesgesundheitsminister Karl Lauterbach überzeugen, dass die Anwendung dieser gesetzlichen
+Vorschrift unverhältnismäßig wäre, da Ärzte und Psychotherapeuten unverschuldet sanktioniert werden
+könnten, wenn ihr PVS-System diese Zertifizierung noch nicht vorweisen kann.
+
+Richtlinie der KBV: https://www.kbv.de/media/sp/2025- 04 -
+16_Rili___75_Abs._7_SGB_V_Anwendung_Grundsatz_Verhaeltnismaessigkeit_Abrechnungsausschluss.pdf
+
+gematik zur Konformitätsbewertung: https://www.ina.gematik.de/kig/konformitaetsbewertung/eml
+
+## RUND UM DIE ELEKTRONISCHE PATIENTENAKTE
+
+**Was ist die elektronische Patientenakte?**
+
+Mit der elektronischen Patientenakte erhalten Versicherte einen digitalen Ordner, in dem persönliche
+Gesundheitsdaten einrichtungsübergreifend abgelegt werden – ob Arztbriefe oder Befundberichte
+beispielsweise vom letzten Besuch beim Hausarzt oder Orthopäden, Entlassbriefe aus dem Krankenhaus
+oder eine Liste mit den elektronisch verordneten Medikamenten. Auch die Versicherten können Daten
+einstellen, zum Beispiel Vitaldaten aus Fitness-Apps. Sie entscheiden, welche Daten in ihre ePA
+reinkommen und wer Einsicht nehmen darf. Praxen beispielsweise haben Zugriff auf alle Informationen in
+der ePA, sofern der Versicherte dem nicht widersprochen oder bestimmte Dokumente verborgen hat.
+
+**Was unterscheidet die ePA von der Behandlungsdokumentation des Arztes oder Psychotherapeuten?**
+
+Die elektronische Patientenakte ist eine versichertengeführte Akte. Sie kann die Anamnese,
+Befunderhebung und Behandlung des Arztes oder Psychotherapeuten unterstützen. Sie ersetzt aber nicht
+die Behandlungsdokumentation des Arztes oder Psychotherapeuten im Praxisverwaltungssystem. Ärzte
+und Psychotherapeuten sind nach Gesetz und Berufsordnung verpflichtet, alle medizinisch relevanten
+Informationen für die Behandlung eines Patienten zeitnah zu dokumentieren – elektronisch oder auf
+Papier. An dieser Pflicht ändert sich mit der ePA nichts.
+
+**Was ändert sich beim innerärztlichen Informationsaustausch?**
+
+Die ePA ändert nichts an der innerärztlichen Kommunikation. Ein Arzt oder Psychotherapeut kann nicht
+sicher sein, dass der weiterbehandelnde Kollege Zugriff auf die ePA hat oder eine von ihm eingestellte
+Information wahrnimmt. Auch hat der Versicherte das Recht, Daten zu löschen. Ist ein professioneller
+Informationstransfer zwischen Kollegen oder zwischen medizinischen Einrichtungen nötig, muss weiterhin
+eine direkte Kommunikation stattfinden – beispielsweise über den Kommunikationsdienst KIM.
+
+**Auch Arztbriefe sollen in der ePA abgelegt werden. Ist eine Übermittlung via KIM dann noch nötig?**
+
+Ja, denn Patienten können einem Arzt jederzeit den Zugriff auf die ePA entziehen oder den Arztbrief
+löschen. Dennoch ist es sinnvoll, den Arztbrief nicht nur an die Kollegin oder den Kollegen zu senden,
+sondern auch in die ePA einzustellen. So hat zu einem späteren Zeitpunkt auch ein anderer
+mitbehandelnder Facharzt oder ein Krankenhausarzt Zugriff auf die Informationen.
+
+
+**Welchen Nutzen hat die ePA, wenn Ärzte nicht sicher sein können, dass alle Diagnosen und Befunde in
+der ePA hinterlegt sind?**
+
+Aktuell ist es häufig der Fall, dass dem behandelnden Arzt Dokumente aus vorangegangenen Behandlungen
+fehlen oder gar nichts vorliegt. Mitunter bringen die Patienten einen Berg von alten Befunden mit, die dann
+teilweise eingescannt werden. Mit einer funktionierenden ePA kann sich diese Situation erheblich
+verbessern, auch wenn die Akte nicht vollständig gefüllt sein sollte. Die ePA kann so die Anamnese,
+Diagnostik und Behandlung sinnvoll ergänzen.
+
+**Müssen Patienten die ePA nutzen?**
+
+Die Nutzung der ePA ist freiwillig. Versicherte haben die Möglichkeit, der Einrichtung und Bereitstellung
+einer ePA durch ihre Krankenkasse zu widersprechen. Dies war erstmalig vor der initialen Einrichtung
+möglich. Aber auch später ist jederzeit ein Widerspruch möglich. Die Krankenkassen sind in diesem Fall
+verpflichtet, die ePA inklusive aller Daten zu löschen.
+
+**Wie funktioniert die ePA in der Videosprechstunde?**
+
+War der Patient in den letzten 90 Tagen in der Praxis – wurde also die Versichertenkarte gesteckt und das
+Versichertenstammdatenmanagement erfolgreich durchgeführt – haben Ärzte und Psychotherapeuten
+auch in der Videosprechstunde Zugriff auf die ePA. Ist das nicht der Fall, könnte der Patient dem Arzt oder
+Psychotherapeuten über seine ePA-App Zugriff erteilen. Ansonsten kann die ePA in Videosprechstunden
+nicht genutzt werden.
+
+**Wann kommt die ePA für Privatversicherte?**
+
+Private Krankenkassen dürfen ihren Versicherten eine ePA anbieten, müssen es aber nicht. Näheres dazu
+stellt der PKV-Verband auf seiner Internetseite vor.
+
+## ZUGRIFF UND EINSICHTNAHME
+
+**Wie erhalten Praxen Zugriff auf die ePA?**
+
+Mit dem Stecken der Versichertenkarte erhält die Praxis automatisch für 90 Tage Zugriff auf die ePA. Dieses
+Zugriffsrecht besteht fort, wenn der Patient die Praxis verlassen hat. Der Patient muss zu keinem Zeitpunkt
+eine PIN eingeben.
+
+**Wie erteilt der Patient sein Einverständnis, dass der Arzt oder Psychotherapeut Zugriff auf die ePA hat?
+Muss die Erlaubnis schriftlich erfolgen?**
+
+Eine Arzt- oder Psychotherapiepraxis hat im Behandlungskontext standardmäßig Zugriff auf alle Inhalte der
+ePA eines Versicherten. Der Behandlungskontext wird durch Stecken der elektronischen Gesundheitskarte
+nachgewiesen. Hierdurch erhält die Praxis automatisch Zugriff auf die ePA-Inhalte für einen Zeitraum von
+90 Tagen. Eine zusätzliche Erlaubnis ist weder mündlich noch schriftlich erforderlich.
+
+**Wie lange gilt das Einverständnis? Wie oft muss ich als Arzt fragen, ob ich allen Daten sehen kann?**
+
+Mit dem Stecken der elektronischen Gesundheitskarte in das Kartenterminal erhält die Praxis automatisch
+für einen Zeitraum von 90 Tagen Zugriff auf die Inhalte der ePA. Wenn der Patient nicht möchte, dass die
+Praxis seine Daten in der ePA sehen kann, muss er den Zugriff per ePA-App oder bei seiner Krankenkasse
+sperren lassen. Der Arzt muss also nicht nachfragen.
+
+
+**Können Ärzte und Psychotherapeuten die komplette ePA einsehen, sobald der Patient die
+Versichertenkarte steckt?**
+
+Ja. Mit dem Stecken der Versichertenkarte erhält die Praxis für 90 Tage Zugriff auf die komplette Akte –
+vorausgesetzt der Patient hat nicht einzelne Informationen gesperrt.
+
+**Wird Ärzten und Psychotherapeuten angezeigt, welche Dokumente sie gegebenenfalls nicht sehen
+können, weil der Patienten den Zugriff darauf gesperrt hat?**
+
+Nein, dies ist aus Datenschutzgründen nicht gestattet.
+
+**Wie wird ein Verlauf möglich sein, wenn die Daten nur 90 Tage zur Verfügung stehen?**
+
+Patienten können mit Hilfe der ePA-App die Zugriffszeit einer Praxis auf die ePA beliebig verlängern (auch
+ein dauerhafter Zugriff ist möglich), allerdings auch verkürzen. Zudem verlängert sich mit jedem erneuten
+Stecken der Versichertenkarte der Zeitraum auf 90 Tage.
+
+**Ein Arzt überweist einen Patienten beispielsweise zu einem CT. Wie erfährt er, ob der Befund schon in
+der ePA vorliegt? Muss er jeden Tag nachschauen?**
+
+Ärzte sind weiterhin verpflichtet, dem Überweiser das Untersuchungsergebnis auf direktem Weg zu
+übermitteln, zum Beispiel elektronisch per KIM. Daran ändert sich mit der ePA nichts. Zusätzlich ist der Arzt,
+der den Befund erstellt hat, verpflichtet, den Befundbericht in die ePA des Patienten einzustellen.
+
+**Wann wird es eine Volltextsuche geben?**
+
+Die Volltextsuche soll ab März 2026 zur Verfügung stehen. Dann lässt sich die ePA auch mit eigenen
+Suchbegriffen individuell durchsuchen.
+
+**Wie lassen sich ein aktueller Laborbefund oder das Ergebnis der letzten Koloskopie schnell finden?**
+
+Aus technischen Gründen kann zunächst nur in den sogenannten Metadaten nach Erstellungsdatum, Art
+der Einrichtung, Fachgebiet und Art des Dokuments (Arztbrief, Laborbefund, Entlassbrief etc.) gesucht
+werden. Die Volltextsuche auch über die Inhalte der Daten in der ePA wird voraussichtlich im März 2026
+verfügbar sein.
+
+**Lassen sich die Dokumente in der ePA nach dem Einstelldatum sortieren?**
+
+Ja, das ist möglich. Ärzte und Psychotherapeuten können sich so beispielsweise nur die neueren
+Dokumente in der ePA anzeigen lassen.
+
+**Werden neue Dokumente in fetter Schrift und nach dem Lesen in normaler Schrift dargestellt, sodass
+sofort erkennbar ist, dass etwas Neues da ist?**
+
+Das ist grundsätzlich möglich, hängt aber von der Implementierung im Praxisverwaltungssystem ab.
+
+**Wie funktioniert die Suche in der ePA genau?**
+
+Die Funktionsweise der Suche ist abhängig vom Praxisverwaltungssystem.
+
+**Wie soll das Ganze im Praxisalltag funktionieren? Ist mit der ePA nicht ein hoher Aufwand für
+Praxisteams verbunden, die jetzt schon genug zu tun haben?**
+
+Die Sorge, dass es durch die Einführung der ePA zu neuen unnötigen Verwaltungsaufwänden in den Praxen
+kommen kann, ist verständlich. Die KBV setzt sich dafür ein, dass der Aufwand so gering wie möglich ist.
+Eine wesentliche Voraussetzung ist, dass das Praxisverwaltungssystem für die ePA gut funktioniert.
+Außerdem müssen die Krankenkassen, aber auch das Bundesgesundheitsministerium die Versicherten
+umfassend informieren. Dies darf nicht an den Praxen hängenbleiben.
+
+
+**Wie können Ärzte oder Rettungssanitäter bei einem Unfall beispielsweise die Medikationsliste und die
+Diagnosen einsehen, wenn der Patient nicht ansprechbar ist?**
+
+Zum jetzigen Zeitpunkt ist das noch nicht möglich. Die gematik arbeitet daran, einen mobilen Zugriff auf die
+ePA zu ermöglichen.
+
+## BEFÜLLUNG DER ELEKTRONISCHEN PATIENTENAKTE
+
+**Wer befüllt die ePA?**
+
+Vertragsärzte und -psychotherapeuten sind verpflichtet, die Akte zu befüllen. Das gleiche gilt mit Start der
+ePA für Krankenhausärzte, Apotheker und Zahnärzte. Später kommen noch andere Berufsgruppen wie
+Physiotherapeuten und Ergotherapeuten hinzu. Ebenso können Patienten, aber auch die Krankenkassen
+Daten einstellen.
+
+**Welche Daten müssen Ärzte und Psychotherapeuten in die ePA einstellen?**
+
+Zu den Dokumenten, die Praxen mit Start der neuen ePA einstellen müssen, gehören Befundberichte aus
+selbst durchgeführten invasiven oder chirurgischen sowie nichtinvasiven oder konservativen diagnostischen
+und therapeutischen Maßnahmen. Auch eigene Befunddaten aus bildgebender Diagnostik, Laborbefunde
+und elektronische Arztbriefe sind einzustellen. Darüber hinaus gibt es Daten, die eine Praxis auf Wunsch
+des Patienten in die ePA einpflegen muss. Das Spektrum, das der Gesetzgeber vorsieht, ist breit: Es reicht
+von Befunddaten und Diagnosen über Daten aus Disease-Management-Programmen, Daten zu Erklärungen
+zur Organ- und Gewebespende, Vorsorgevollmachten und Patientenverfügungen bis hin eAU-
+Bescheinigungen (Patienten-Kopie). Auch Kopien der Behandlungsdokumentation des Arztes oder
+Psychotherapeuten zählen dazu.
+
+**Für Kinder und Jugendliche gibt es eine Sonderregelung. Wie sieht die genau aus?**
+
+Die KBV hat erreicht, dass Ärzte und Psychotherapeuten nicht verpflichtet sind, bei unter 15-Jährigen Daten
+in die ePA zu übermitteln, sofern dem erhebliche therapeutische Gründe entgegenstehen. Gleiches gilt,
+soweit gewichtige Anhaltspunkte für die Gefährdung des Wohles eines Kindes oder eines Jugendlichen
+vorliegen und die Befüllung der ePA den wirksamen Schutz des Kindes oder Jugendlichen in Frage stellen
+würde. Ärzte und Psychotherapeuten, die von diesem Recht Gebrauch machen, halten dies in ihrer
+Behandlungsdokumentation fest.
+
+Die KBV hat dazu in Abstimmung mit dem Bundesgesundheitsministerium eine Richtlinie erlassen. Damit
+haben Ärzte und Psychotherapeuten Klarheit, dass sie in den genannten Fallkonstellationen keine Daten
+einstellen müssen, die das Kindeswohl gefährden könnten.
+
+**Müssen Praxen alle Information zum Gesundheitszustand eines Patienten einstellen – also auch jeden
+Schnupfen?**
+
+Als Faustregel gilt: In die ePA gehört das, was Ärzte und Psychotherapeuten heute schon an Kolleginnen
+und Kollegen berichten. Dabei enthält der Befundbericht vollständige und feststehende Informationen, die
+für mit- und weiterbehandelnde Ärzte und Psychotherapeuten relevant sind. Nicht jede schriftliche
+Aufzeichnung muss in der ePA abgelegt werden. Insbesondere schriftlich dokumentierte Teilbefunde
+sollten nicht in die ePA übertragen werden, um Missverständnisse zu vermeiden.
+
+
+**Gehören zu den Dokumenten, die Praxen auf Wunsch der Versicherten einstellen müssen, auch der
+Impfausweis und der Mutterpass?**
+
+Das ist vorgesehen. Allerdings wird die ePA stufenweise ausgebaut, sodass zu Beginn noch nicht alle
+Dokumente eingestellt werden können. Dazu gehören auch der Impfausweis, der Mutterpass oder auch das
+Kinder-Untersuchungsheft. Denn auch hier gilt: Die Praxen müssen die Daten nicht nur selbst erhoben
+haben, sie müssen auch in elektronischer Form vorliegen. Nur dann können sie sie in die ePA übertragen.
+Der Impfausweis, der Mutterpass und das Kinder-Untersuchungsheft beispielsweise stehen vorerst
+weiterhin nur in Papierform zu Verfügung. Konkret heißt das: Ärztinnen und Ärzte tragen Impfungen,
+Untersuchungen etc. wie bisher in die Papierdokumente ein; eine Befüllung der ePA muss daher nicht
+erfolgen.
+
+**Müssen die Praxen auch alte Befunde einpflegen, die der Patient auf Papier mitbringt?**
+
+Das Einpflegen von Informationen in Papierform, zum Beispiel alte Arztbriefe und Befunde, ist nicht
+Aufgabe der Praxen. Versicherte haben mit der neuen ePA einen gesetzlichen Anspruch darauf, dass ihre
+Krankenkasse für sie solche Dokumente digitalisiert, wenn sie es wünschen. Möglich ist dies zweimal
+innerhalb von 24 Monaten für jeweils bis zu zehn Dokumente. Unabhängig davon können Ärzte auch
+eigene Befunde aus vorangegangenen Behandlungen in die ePA einstellen, wenn das für die Versorgung
+des Patienten erforderlich ist. Aber auch die Versicherten können diese Dokumente einstellen, wenn sie die
+ePA-App ihre Krankenkasse nutzen.
+
+**Sind alle Fachärzte verpflichtet, ihre Befunde in die ePA einzustellen?**
+
+Grundsätzlich sind alle Ärzte verpflichtet, Befunde einzustellen, die sie in der aktuellen Behandlung selbst
+erhoben haben und die elektronisch vorliegen.
+
+**Können Laborärzte ihre Befunde künftig direkt in die ePA einstellen?**
+
+Momentan ist es technisch nicht möglich, dass ein Labor den Befund direkt in die ePA lädt – es sei denn der
+Versicherte gibt dem Labor explizit Zugriffsrechte mittels App. Es ist geplant, dass Laborbefunde in einem
+strukturierten und bundesweit standardisierten Format (als sogenanntes MIO) durch die Labore erzeugt
+und an die beauftragenden Ärzte weitergegeben werden. Als Auftragsleistung ist der Laborbefund daher
+durch den Beauftragenden einzustellen.
+
+**Fließen auch Überweisungen in die ePA ein?**
+
+Überweisungen fließen nicht automatisch in die ePA ein. Sie werden aktuell noch auf den konventionellen
+Mustern auf Papier ausgestellt. Diese könnten als PDF in der ePA bereitgestellt werden. Eine Pflicht hierzu
+existiert aktuell aber nicht.
+
+**Sind auch Medikamente, die vor Einführung der ePA elektronisch verordnet werden, in der
+Medikationsliste enthalten?**
+
+Nein, die ePA enthält eine Übersicht aller elektronisch verordneten und in der Apotheke ausgegeben
+Arzneimittel. Diese Medikationsliste (eML) wird automatisch erstellt und basiert auf den Daten des
+eRezepts. Sie wird nach und nach befüllt, sobald ein Patient eine ePA hat. Verordnungen, die vorher
+ausgestellt wurden, stehen nicht in der Liste.
+
+**Ab wann steht der Medikationsplan in der ePA bereit?**
+
+Der Medikationsplan in der ePA soll im März 2026 kommen. Im Idealfall kann die Arztpraxis dann
+automatisch auf die Medikationsliste zugreifen, wenn sie einen Medikationsplan in der ePA erstellen oder
+aktualisieren möchte – ohne langes Suchen oder dass der Patient überlegen muss, welche Medikation er
+derzeit einnimmt. Der Plan kann bei Bedarf ausgedruckt werden.
+
+
+**Gibt es eine Art Anamneseblatt, auf dem die wichtigsten Befunddaten zusammengefasst sind?**
+
+Die elektronische Patientenkurzakte soll eine solche Zusammenfassung bieten. Sie wird allerdings erst
+später in der ePA bereitstehen.
+
+**Müssen selbst eingespielte Dokumente immer signiert werden?**
+
+Es besteht keine grundsätzliche Pflicht, Dokumente, die in die ePA eingestellt werden, zu signieren. In
+Abhängigkeit der Dokumentenart kann jedoch eine Signatur auf Grund von gesetzlichen oder vertraglichen
+Vorgaben notwendig sein, zum Beispiel bei eArztbriefen.
+
+**Wie lange dauert es, Daten in die ePA einzugeben?**
+
+Ärzte und Psychotherapeuten müssen keine gesonderte Dokumentation für die ePA erzeugen. Vielmehr
+sollen sie Kopien, zum Beispiel von Arztbriefen oder Befundberichten aus bildgebender Diagnostik, in die
+ePA übermitteln und dort speichern. Wie lange das Hochladen der Dokumente dauert, hängt vom
+Praxisverwaltungssystem ab.
+
+**Muss für das Speichern von Daten die Gesundheitskarte gesteckt sein, und ist eine PIN erforderlich?**
+
+Mit dem Stecken der Versichertenkarte erhält die Praxis automatisch für 90 Tage Zugriff auf die ePA. Dieses
+Zugriffsrecht besteht fort, wenn der Patient die Praxis verlassen hat. Der Patient muss zu keinem Zeitpunkt
+eine PIN eingeben. Wichtig zu wissen ist auch: Der Patient kann, ohne in der Praxis zu sein, über seine ePA-
+App die Zugriffszeit der Praxis beliebig verlängern oder verkürzen.
+
+**Welche Dateiformate werden unterstützt?**
+
+Praxen werden anfangs ausschließlich PDF-Dokumente im Format PDF/A einstellen können. Bilddateien
+sollen später folgen.
+
+**Können künftig auch größere Dokumente, zum Beispiel Aufnahmen von CT- oder MRT-Untersuchungen
+(DICOM-Dateien etc.), in der ePA abgelegt werden?**
+
+Zum Start der ePA ist die Größe je Dokument auf 25 MB begrenzt. Zudem können weder kleine Bilddateien
+(z.B. JPEG), noch hochauflösende Bilddateien (z.B. DICOM-Dateien) in die ePA eingestellt werden. Es kann
+auf mögliche externe Quellen verwiesen und der Befundbericht gespeichert werden. Zukünftige
+Ausbaustufen sollen neue Möglichkeiten für kleine und große Bilddateien bieten. Damit die ePA künftig
+auch größere Bilddaten direkt speichern kann, muss der entsprechende ePA-Speicherplatz in den Systemen
+der Krankenkassen erweitert werden.
+
+**Dürfen Ärzte die Befüllung der Patientenakte an eine MFA delegieren?**
+
+Ja. Ärzte dürfen die Befüllung der ePA an eine Medizinische Fachangestellte delegieren. Das Befüllen kann
+auch erfolgen, wenn der Patient die Praxis bereits verlassen hat.
+
+**Wie können Patienten ihre ePA selbst befüllen?**
+
+Patienten können mit der ePA-App, die ihnen ihre Krankenkasse zur Verfügung stellt, Daten in ihrer ePA
+einstellen. Welche Daten das sind, obliegt ihrer Verantwortung und ist nicht limitiert. Beispiele sind Vital-
+Daten aus Gesundheitsapps oder ein selbst geführtes Tagesbuch zu Blutdruckmessungen. Versicherte
+können zudem Papierbefunde scannen und in ihre ePA stellen.
+
+**Wie und wann werden medizinische Informationsobjekte eingebunden?**
+
+Sogenannte medizinische Informationsobjekte (MIO) werden sukzessive eingeführt. Der Gesetzgeber regelt
+dies über eine Rechtsverordnung. Das erste MIO – der elektronische Medikationsplan – soll ab März 2026
+nutzbar sein.
+
+
+**Wann wird der elektronische Impfpass in die ePA implementiert?**
+
+Für den Impfpass wird es ein MIO geben, sodass die Daten einheitlich und strukturiert abgelegt sind. Das
+MIO ist bereits fertig entwickelt, wurde aber noch nicht durch die Industrie umgesetzt. Die Details dazu will
+der Gesetzgeber in einer Rechtsverordnung regeln.
+
+**Stimmt es, dass die Krankenkassen in Anspruch genommene Leistungen ihrer Versicherten einstellen?**
+
+Versicherte haben nach Paragraf 350 SGB V Anspruch darauf, dass die Krankenkassen Daten zu den von
+ihnen in Anspruch genommenen Leistungen einstellt – für sämtliche Kassenleistungen, die in der
+ambulanten und stationären Versorgung erbracht wurden. Auch zulasten der GKV verordnete Arzneimittel
+werden in den Abrechnungsübersichten mancher Krankenkassen aufgelistet. Der Anspruch auf eine
+Übermittlung der Leistungsdaten besteht bereits jetzt schon.
+
+**Können Versicherte der Speicherung einer Abrechnungsübersicht widersprechen?**
+
+Versicherte können entweder per ePA-App widersprechen oder sich direkt an ihre Krankenkasse wenden,
+wenn sie die Abrechnungsdaten nicht in ihrer ePA haben möchte. Denn die Abrechnungsdaten enthalten
+auch die Behandlungsdiagnosen und damit mitunter hochsensible Informationen. Alternativ zum
+Widerspruch haben Versicherte die Möglichkeit, die Abrechnungsdaten in ihrer ePA für andere
+auszublenden. Dann fließen sie zwar in die ePA, aber nur sie selbst können sie einsehen.
+
+**Wie werden die Abrechnungsdaten in der ePA dargestellt?**
+
+Das kann von Krankenkasse zu Krankenkasse verschieden sein. Denn jede Krankenkasse entscheidet selbst,
+wie detailliert sie die Daten abbildet. So kann die Abrechnungsübersicht die Gebührenordnungspositionen
+inklusive Punktzahl und Euro-Betrag oder Diagnosekodes mit oder ohne Zusatzkennzeichen zur Angabe der
+Diagnosesicherheit umfassen. Außerdem können Informationen wie die Adresse der Praxis inklusive der
+Nebenbetriebsstätte, Name des behandelnden Arztes oder Psychotherapeuten, Abrechnungsquartal und
+Tag der Behandlung ausgewiesen werden.
+
+**Was ist zu tun, wenn Patienten eine Diagnose in der Abrechnungsübersicht korrigieren lassen wollen?**
+
+Versicherte haben das Recht, bei ihrer Krankenkasse eine Korrektur von falschen Diagnosen in ihrer
+Abrechnungsübersicht zu beantragen. Sie benötigen dazu einen ärztlichen Nachweis, dass die Diagnose
+falsch ist. Die Krankenkasse ist dann verpflichtet, die Korrektur innerhalb von vier Wochen in dem
+Dokument, das in der ePA liegt, vorzunehmen. Eine nachträgliche Korrektur in den Abrechnungsunterlagen
+des Vertragsarztes oder -psychotherapeuten ist nicht erforderlich.
+
+**Die KVen sind künftig gesetzlich verpflichtet, ungeprüfte Abrechnungsdaten vorab an die Krankenkassen
+zu übermitteln. Werden diese Daten auch in der Abrechnungsübersicht der ePA dargestellt?**
+
+Nein, die Krankenkassen übermitteln keine unbereinigten Abrechnungsdaten in die ePA-
+Abrechnungsübersichten ihrer Versicherten.
+
+**Welche Daten gehören zum Notfalldatensatz?**
+
+Der Notfalldatensatz enthält Informationen zu Dauerdiagnosen und Dauermedikation sowie Kontaktdaten
+von behandelnden Ärzten und Angehörigen. Auch Besonderheiten wie Allergien/Unverträglichkeiten oder
+Implantate sind dort aufgeführt. In einem Freitextfeld können weitere spezielle Informationen gespeichert
+werden. Der Notfalldatensatz wird momentan weiterentwickelt und soll künftig als elektronische
+Patientenkurzakte (ePKA) bereitstehen.
+
+
+## INFORMATIONS- UND DOKUMENTATIONSPFLICHTEN
+
+**Müssen Ärzte ihre Patienten darüber informieren, dass sie Befunde in ihre ePA einstellen?**
+
+Grundsätzlich gilt: Ärzte und -psychotherapeuten informieren ihre Patienten darüber, welche Daten sie im
+Rahmen ihrer gesetzlichen Verpflichtung in der ePA speichern. Dies kann mündlich oder auch per
+Praxisaushang erfolgen (die KBV stellt hierzu ein Poster zum Ausdrucken bereit). Sollten Patienten
+widersprechen, ist dies in der Behandlungsdokumentation zu dokumentieren. Es ist außerdem Aufgabe der
+Praxis, die Patienten darauf hinzuweisen, dass sie Anspruch auf die Befüllung der Akte mit weiteren Daten
+haben. Wird dies gewünscht, muss die Praxis die Einwilligung des Patienten ebenfalls in der
+Behandlungsdokumentation des Arztes oder Psychotherapeuten erfassen.
+
+**Welche Informations- und Dokumentationspflichten gelten beim Einstellen hochsensibler Daten?**
+
+Für hochsensible Daten insbesondere zu sexuell übertragbaren Infektionen, psychischen Erkrankungen und
+Schwangerschaftsabbrüchen gilt:
+
+› Ärzte und Psychotherapeuten müssen die Patienten auf das Recht zum Widerspruch hinweisen.
+
+› Patienten können dann im unmittelbaren Behandlungskontext widersprechen, dass diese Daten in die
+ePA eingestellt werden.
+
+› Ärzte und Psychotherapeuten müssen den Widerspruch nachprüfbar in ihrer
+Behandlungsdokumentation protokollieren.
+
+Für Ergebnisse von genetischen Untersuchungen oder Analysen im Sinne des Gendiagnostikgesetzes gilt:
+
+› Diese dürfen in der ePA nur gespeichert werden, wenn der Patient explizit eingewilligt hat.
+
+› Die Einwilligung muss ausdrücklich und schriftlich oder in elektronischer Form vorliegen.
+
+**Kann die Information auch durch einen Aushang erfolgen?**
+
+Ärzte und Psychotherapeuten können die Patienten mündlich, aber auch schriftlich, zum Beispiel durch
+einen Aushang darüber informieren, welche Dokumente sie einstellen müssen und dass bei besonders
+sensiblen Daten ein Widerspruchsrecht besteht. Die KBV stellt ein Poster zum Ausdrucken bereit:
+https://www.kbv.de/media/sp/2024- 11 - 06_eP__Praxenaushang.pdf).
+
+**Was müssen Ärzte und Psychotherapeuten dokumentieren?**
+
+Möchte ein Patient nicht, dass die Praxis ein gesetzlich vorgeschriebenes Dokument einstellt,
+dokumentieren Ärzte und Psychotherapeuten dies in ihrer Behandlungsdokumentation. Auch die
+Einwilligung, dass ein Patient auf Wunsch weitere Daten eingestellt haben möchte, muss festgehalten
+werden. Besondere Vorschriften gelten bei hochsensiblen Daten, die eine stigmatisierende Wirkung haben
+können. Widerspricht der Patient dem Einstellen solcher Daten, ist dies ebenfalls zu dokumentieren. Bei
+genetischen Untersuchungen oder Analysen im Sinne des Gendiagnostikgesetzes muss die ausdrückliche
+Einwilligung des Patienten in schriftlicher oder in elektronischer Form vorliegen.
+
+**Muss der Patient in der Praxis einwilligen, damit ich in seine ePA schauen kann?**
+
+Nein. Eine Arzt- oder Psychotherapiepraxis hat im Behandlungskontext standardmäßig Zugriff auf alle
+Inhalte der ePA eines Versicherten. Der Behandlungskontext wird durch Stecken der elektronischen
+Gesundheitskarte nachgewiesen. Hierdurch erhält die Praxis automatisch Zugriff auf die ePA-Inhalte für
+einen Zeitraum von 90 Tagen. Eine zusätzliche Erlaubnis ist nicht erforderlich. Möchte der Patient nicht,
+
+
+dass die Praxis seine ePA einsehen kann, muss er gegenüber seiner Krankenkasse aktiv widersprechen – per
+ePA-App oder bei einer Ombudsstelle.
+
+## TECHNIK UND FUNKTIONSWEISE
+
+**Welche technische Ausstattung benötigen Praxen, um die ePA nutzen zu können?**
+
+Voraussetzung ist ein Anschluss an die Telematikinfrastruktur. Dafür sind die bekannten Komponenten und
+Dienste erforderlich wie Konnektor und Praxisausweis (siehe [http://www.kbv.de/html/30722.php).](http://www.kbv.de/html/30722.php).) Zusätzlich
+muss das Praxisverwaltungssystem die ePA (3.0) unterstützen. Dafür ist ein entsprechendes Update
+erforderlich.
+
+**Inwieweit ist für die ePA der eHBA erforderlich oder reicht die SMC-B aus?**
+
+Um auf die ePA zugreifen zu dürfen, muss der Arzt oder Psychotherapeut neben der SMC-B auch über
+einen elektronischen Heilberufsausweis (eHBA) verfügen.
+
+**Wie erhalten Praxen die Kosten für die Technik erstattet?**
+
+Die Kosten für die ePA sind Teil der monatlichen TI-Finanzierungspauschale (siehe
+[http://www.kbv.de/html/64259.php).](http://www.kbv.de/html/64259.php).)
+
+**Wie funktioniert die ePA ohne Konnektor?**
+
+Praxen müssen für die Nutzung der ePA an die Telematikinfrastruktur angebunden sein. Somit ist ein
+Konnektor notwendig – entweder Vor-Ort in der Praxis oder über einen alternativen Anschluss
+(siehe [http://www.kbv.de/html/30722.php](http://www.kbv.de/html/30722.php) unter „Konnektor und andere Anschlussarten“)
+
+**Können Patienten die ePA nur per App und Mobiltelefon nutzen?**
+
+Patienten können die ePA vollständig und selbstständig nur mit der ePA-App ihrer Krankenkasse nutzen.
+Zusätzlich können sie gewisse Einstellungen der ePA, insbesondere zu Widersprüchen in Anwendungsfällen
+der ePA, durch die Krankenkasse vornehmen lassen. Später soll es auch eine Desktop-Variante für
+Versicherte geben.
+
+**Werden Dokumente aus der ePA heruntergeladen oder nur geöffnet? Und wer garantiert, dass keine
+Viren im Spiel sind?**
+
+Die ePA bietet keine Möglichkeit eines Virenscans an. Die Praxis muss sich selbst vor Viren schützen und die
+entsprechenden Programme installieren. Allerdings sind viele Dokumentenarten, die ein hohes Risiko für
+Viren beinhalten, technisch von der ePA ausgeschlossen, zum Beispiel ausführbare Dateien und Microsoft
+Office Dateien. Auch PDF sind nur in der sichereren Version PDF/A zugelassen.
+
+**Warum werden erst sukzessiv zusätzliche Funktionen nutzbar sein?**
+
+Die Umsetzung und der Funktionsumfang der ePA ist komplex. Die Einführung einer vollumfänglichen ePA,
+die alle Funktionen, Prozesse und Dokumentenarten unterstützt, wäre zeitlich und inhaltlich nicht durch die
+Industrie realisierbar gewesen. Der stufenweise Ausbau der Funktionalitäten ist auch für Arztpraxen
+sinnvoll. So kann der Einstieg in die ePA möglichst niederschwellig erfolgen.
+
+
+**Wie kommen die Daten aus dem Praxisverwaltungssystem in die ePA?**
+
+Die Daten werden über die Telematikinfrastruktur in die ePA übertragen oder von dort heruntergeladen.
+
+**Wo wird die ePA gespeichert, und wo wird sie bearbeitet?**
+
+Die ePA ist auf Servern von ePA-Aktenanbietern gespeichert, die die ePA im Auftrag der Krankenkassen
+betreiben. Ärzte und Psychotherapeuten greifen mit Hilfe ihres Praxisverwaltungssystems auf die ePA zu.
+Patienten wiederum nutzen die ePA-App, die die Krankenkassen in den App-Stores zur Verfügung stellen.
+
+**Was können Praxen tun, wenn der Zugriff auf die ePA eines Patienten nicht funktioniert?**
+
+Mit dem Stecken der Gesundheitskarte sollte der Zugriff auf die ePA eigentlich automatisch freigeschaltet
+werden. Womöglich ist die Ursache für den Fehler eine technische Störung, die Praxen eigenständig
+beheben können: über einen Klick auf die Option "Zugriff herstellen" im Praxisverwaltungssystem, um den
+Prozess erneut in Gang zu setzen, unter anderem auch den Abruf der Versichertenstammdaten im
+Hintergrund.
+
+## RECHTLICHE FRAGEN
+
+**Wer entscheidet, welche Daten in der ePA gespeichert werden? Wer trägt die Verantwortung dafür?**
+
+Der Gesetzgeber hat in Paragraf 347 SGB V ausgeführt, welche Daten die Praxen in die ePA zu überführen
+haben. Voraussetzung ist immer, dass der Arzt oder Psychotherapeut Zugriff auf die ePA hat – der Patient
+dem also nicht widersprochen und auch nicht festgelegt hat, dass er bestimmte Informationen, die der Arzt
+einstellen muss, nicht in seiner ePA haben will. Die KBV hat dazu eine PraxisInfo erstellt, die Sie hier finden.
+
+**Sind Ärzte und Psychotherapeuten verpflichtet, routinemäßig in die ePA zu schauen?**
+
+Eine „anlasslose Ausforschungspflicht“, also dass der Arzt oder Psychotherapeut routinemäßig in die ePA
+schauen muss, gibt es nicht. Grundlage der ärztlichen Behandlung bleibt das anamnestische Gespräch.
+Hieraus können sich Umstände ergeben, die eine Einsichtnahme erforderlich machen – eine Patientin mit
+Oberbauchschmerzen weist zum Beispiel auf einen aktuellen Befund einer kürzlich durchgeführten
+Magenspiegelung hin. Der Arzt kommt so seiner ärztlichen Sorgfalt nach.
+
+**Ist der Patient dazu verpflichtet, den Arzt oder Psychotherapeuten auf relevante Dokumente in der ePA
+hinzuweisen?**
+
+Ja, der Patient hat eine Mitwirkungsverpflichtung im Rahmen der Behandlung.
+
+**Was geschieht, wenn der Patient falsche Angaben macht? Können daraus Haftungsrisiken für den Arzt
+oder Psychotherapeuten entstehen?**
+
+Nein. Ärzte und Psychotherapeuten dürfen grundsätzlich auf die Richtigkeit dessen vertrauen, was der
+Patient sagt. Das ist durch die Rechtsprechung abgesichert.
+
+**Können Ärzte und Psychotherapeuten darauf vertrauen, dass die in der ePA enthaltenen Informationen
+richtig sind?**
+
+Ja, Ärzte und Psychotherapeuten können darauf grundsätzlich vertrauen. Einzige Ausnahme wäre, wenn
+irgendein Umstand die Glaubwürdigkeit der Aussage des Patienten oder der Information in der ePA
+erschüttert, wenn eine Information also ganz offensichtlich unplausibel ist.
+
+
+**In der ePA häuft sich ein Wust von Informationen an, der über die Jahre immer umfangreicher wird. Ist
+die Gefahr für Ärztinnen und Psychotherapeuten nicht ziemlich groß, etwas zu übersehen?**
+
+Grundlage der Behandlung bleibt das anamnestische Gespräch. Ärzte und Psychotherapeuten müssen nicht
+routinemäßig in die ePA schauen, sondern nur, wenn es einen konkreten Hinweis darauf gibt, dass die ePA
+für die Behandlung relevante Informationen enthält. Es stellt sich beispielsweise ein Patient mit
+unspezifischen Bauchschmerzen vor, und der Arzt sieht eine OP-Narbe im Bauchbereich. In diesem Fall
+sollte der Arzt fragen, ob es einen OP-Bericht in der ePA gibt. In vielen Fällen wird der Patient auch von sich
+aus auf ein relevantes Dokument in der ePA hinweisen.
+
+**Ändert die ePA etwas an den Aufklärungspflichten gegenüber den Patienten? Kann man davon ausgehen,
+dass die Patienten sich mit den Dokumenten in der ePA beschäftigen?**
+
+An den Aufklärungspflichten gegenüber den Patienten ändert sich jedenfalls bezogen auf die eigentliche
+Behandlung nichts. Was hinzukommt, sind bestimmte Informationspflichten, etwa bezogen auf die
+Widerspruchsmöglichkeiten bei besonders sensiblen Diagnosen und über den Umstand, dass generell
+Daten in die ePA eingestellt werden.
+
+**Wird durch die Befüllungspflicht die ärztliche Schweigepflicht verletzt?**
+
+Nein, die Schweigepflicht ist durch die ePA nicht betroffen. Das SGB V konstituiert Befüllungspflichten, die
+durch Vertragsärzte zu befolgen sind. Dies ist auch im Lichte von Art. 9 der Datenschutzgrundverordnung
+(DSGVO) – besonderer Schutz von Gesundheitsdaten – zulässig. Der Art. 9 Abs. 2h DSGVO gestattet es dem
+nationalen Gesetzgeber, Datenverarbeitungen im Gesundheitswesen auch ohne Einwilligung des Patienten
+vorzusehen, so dies für das Gesundheitswesen „erforderlich“ ist. Im Übrigen handelt es sich bei der ePA um
+eine versichertengeführte Akte, sodass die Daten weiterhin dem Versicherten zugeordnet sind.
+
+**Bin ich als Psychotherapeut verpflichtet, über mögliche negative Konsequenzen der ePA zu informieren?**
+
+Es gibt für psychische Erkrankungen eine besondere Belehrungspflicht über das Widerspruchsrecht der
+Patienten. Das heißt: Ärzte und Psychotherapeuten müssen die Patienten ausdrücklich auf deren
+Widerspruchsmöglichkeiten hinweisen und in der Behandlungsdokumentation dokumentieren, sollte der
+Patient widersprechen.
+
+**Dürfen Praxen das Befüllen der Akte verweigern, wenn der Praxisalltag es gerade nicht zulässt?**
+
+Nein, aus den Paragrafen 347ff. SGB V ergeben sich die Befüllungspflichten, die im aktuellen
+Behandlungskontext zu erfolgen haben. Zudem kann die ePA auch befüllt werden, wenn der Patient die
+Praxis bereits verlassen hat.
+
+**Was ist, wenn ein Arzt oder Therapeut nicht an die Telematikinfrastruktur angebunden ist? Ist er dann
+von allen Verpflichtungen zur Befüllung und zur Kenntnisnahme der ePA befreit?**
+
+Dann greifen die gesetzlichen Sanktionen, und der Arzt verstößt gegen vertragsärztliche Pflichten.
+
+**Kann die elektronische Patientenakte so angelegt sein, dass ich damit meiner 10-jährigen
+Aufbewahrungspflicht nach Praxisschließung nachkomme?**
+
+Die ePA wird vom Versicherten geführt. Sie hat mit der Behandlungsdokumentation, zu der jeder Arzt und
+Psychotherapeut weiterhin verpflichtet ist, nichts zu tun. Die Aufbewahrungspflicht gilt somit unverändert
+weiterhin.
+
+**Welche rechtlichen Folgen hat es, wenn ein Arzt beim Befüllen der ePA einen Befund, den er selbst
+erhoben hat und der später von besonderer Bedeutung sein könnte, übersieht?**
+
+Es wird bei der Einstellung der gesetzlich geforderten Befüllungen die ärztliche Sorgfalt einzuhalten sein.
+
+
+**Könnte die (Pflicht zur) Dokumentation in Zukunft nicht mehr beim Arzt, sondern beim Patienten liegen?**
+
+Ärzte und Psychotherapeuten sind nach Gesetz und Berufsordnung verpflichtet, alle medizinisch relevanten
+Informationen für die Behandlung eines Patienten zeitnah festzuhalten – elektronisch oder auf Papier. An
+dieser Dokumentationspflicht ändert sich mit der ePA nichts.
+
+**Wer ist verantwortlich, wenn der Patient wichtige Diagnosen aus seiner Akte entfernt, zum Beispiel HIV
+oder ein Krebsleiden?**
+
+Der Patient. Es ist seine Akte, die von ihm geführt wird.
+
+**Wie erkennt man im Nachhinein, welche Informationen zum Zeitpunkt der Anamnese in der ePA sichtbar
+waren? Der Patient kann jederzeit Inhalte sperren oder freigeben. Liegt die Beweislast dann beim Arzt?**
+
+Die Beweislast kann hierzu nicht beim Arzt liegen.
+
+**Wer darf eine „falsche“ Diagnose löschen beziehungsweise ändern? Nur der Arzt, der sie eingetragen hat,
+oder der Patient selbst?**
+
+Die Verantwortung für die eigene Befüllung trägt der jeweilige Arzt.
+
+**Reicht es bei einer Praxisaufgabe, dass der Patient seine Daten in der ePA hat?**
+
+Nein. Die ePA hat nichts mit der Behandlungsdokumentation des Arztes oder Psychotherapeuten im PVS zu
+tun. Die ePA wird vom Versicherten geführt. Dieser kann zum Beispiel Befunde oder Arztbriefe löschen
+oder verbergen oder den Zugriff sperren.
+
+**Wie bin ich in Zukunft als Arzt rechtlich geschützt in Haftungsfragen, wenn Patienten Befunde
+vorenthalten oder diese von ihnen gelöscht werden dürfen?**
+
+Das Verhalten des Patienten hat der Arzt nicht zu vertreten.
+
+**Ist die Praxis verpflichtet, die „Löschwünsche“ des Patienten zu erfüllen, auch wenn das Dokument von
+einer anderen Praxis in die ePA eingespielt wurde?**
+
+Der Patient hat die Möglichkeit, die Daten selbst zu löschen.
+
+**Ist die Praxis verpflichtet, dem Patienten Einblick in die gesamte ePA zu geben?**
+
+Ja. Es ist die Akte des Patienten. Auf diese kann er selbst zugreifen, wenn er die ePA-App seiner
+Krankenkasse nutzt.
+
+## FRAGEN SPEZIELL ZUR PSYCHOTHERAPIE
+
+**Was ändert sich für Psychotherapeuten durch die Einführung der elektronischen Patientenakte?**
+
+Die Einführung der ePA betrifft auch die Psychotherapeuten. Sie sind ebenfalls verpflichtet, Daten aus dem
+aktuellen Behandlungskontext einzupflegen. Es wird sich in der Regel um Erkrankungen handeln, die eine
+stigmatisierende Wirkung haben können. Für solche Daten gelten besondere Informationspflichten. Das
+heißt: Die Psychotherapeutin oder der Psychotherapeut weist die Patienten ausdrücklich auf deren
+Widerspruchsmöglichkeiten hin und dokumentiert im Falle eines Widerspruchs dies ausdrücklich in seiner
+oder ihrer Behandlungsdokumentation. Allerdings gibt es derzeit noch einige ungeklärte Fragen,
+
+
+insbesondere zum Umgang mit Minderjährigen und zum Umgang mit subjektiven Aufzeichnungen. Diese
+Fragen hat die KBV an das BMG adressiert mit der Bitte um Klärung.
+
+**Welche Daten müssen Psychotherapeuten in die ePA einstellen?**
+
+Psychotherapeuten müssen grundsätzlich die gleichen Daten einstellen wir Ärzte. Das Gesetz verlangt
+Daten zu Laborbefunden, Befunddaten aus bildgebender Diagnostik, Befundberichte aus invasiven und
+chirurgischen sowie nichtinvasiven oder konservativen Maßnahmen und elektronische Arztbriefe. Auch
+kann der Patient verlangen, dass die Patientenakte, die der Psychotherapeut führt, eingestellt wird.
+Handschriftliche Gesprächsaufzeichnungen zur Unterstützung der Sitzung jenseits der Patientenakte
+brauchen nicht eingestellt zu werden. Bei Psychotherapeuten wird in der Regel aber das besondere
+Widerspruchsrecht und die Belehrung hierzu in Betracht kommen.
+
+Dabei gilt immer: Auch Psychotherapeuten müssen nur Daten in die ePA übertragen, die sie in der aktuellen
+Behandlung selbst erhoben haben und die in elektronischer Form vorliegen.
+
+**Wenn Krankenkassen Abrechnungsdiagnosen in die ePA übermitteln, kann der Patient diese löschen
+oder seiner Kasse untersagen, solche Daten in die ePA hochzuladen?**
+
+Versicherten können gegenüber ihrer Krankenkasse erklären, dass sie die Abrechnungsdaten nicht in ihrer
+ePA haben möchten. Auch das Löschen oder Verbergen der Daten ist möglich.
+
+**Was passiert mit eRezepten, die der Patient NICHT in der Medikationsliste der ePA sehen will, weil sie
+hochsensible Daten enthalten?**
+
+Einzelne Verordnungen können nicht ausgeblendet werden. Patienten haben aber die Möglichkeit, der
+Medikationsliste insgesamt zu widersprechen oder sie insgesamt zu verbergen. Beim Verbergen kann nur
+der Patient die Liste sehen.
+
+**Müssen auch Stundenprotokolle einer Psychotherapie-Sitzung hochgeladen werden?**
+
+Psychotherapeuten müssen keine Stundenprotokolle in die ePA einstellen.
+
+**Haben Psychotherapeuten auch Einsicht in die Medikation?**
+
+Mit dem Stecken der elektronischen Gesundheitskarte haben Psychotherapeuten Zugriff auf alle Daten, die
+in der ePA gespeichert sind und die der Versicherte nicht ausgeblendet hat. Dazu gehört auch die
+Medikationsliste, die mit Start der ePA automatisch erstellt wird. Sie enthält alle Arzneimittel, die der
+Patient per eRezept verordnet bekommen hat.
+
+**Wie werden psychiatrische Medikamente gehandhabt?**
+
+In der Medikationsliste werden in der ePA alle Arzneimittel angezeigt, die der Patient per eRezept
+verschrieben bekommen hat. Wenn ein Patient nicht möchte, dass beispielsweise seine Medikamente zur
+Behandlung psychischer Erkrankungen sichtbar werden, kann er der Medikationsliste widersprechen –
+allerdings nur gesamthaft. Dann werden keine seiner Medikamente in der ePA gespeichert. Möglich ist
+auch, dass er die Medikationsliste komplett verbirgt. Dann kann nur er sie sehen.
+
+**Die ePA scheint hauptsächlich für Ärzte ausgelegt zu sein. Warum müssen Psychotherapeuten sich auch
+dazu verpflichten und den Mehraufwand bei letztendlich null Nutzen mittragen?**
+
+Die ePA enthält Dokumente, die auch für die psychotherapeutische Behandlung relevant sind. Dazu gehört
+die Medikationsliste, aber auch Informationen zu somatischen Erkrankungen, die für einen
+Psychotherapeuten von Interesse sein können. Diese Dokumente stehen künftig digitalisiert und
+gesammelt zur Verfügung.
+
+
+## DATENSCHUTZ
+
+**Wer ist für den Datenschutz verantwortlich?**
+
+Die Verantwortung für den Datenschutz in Bezug auf die ePA tragen laut Gesetz nicht die Ärzte und
+Psychotherapeuten, sondern die gesetzlichen Krankenkassen. Sie sind diejenigen, die die ePA anbieten.
+Entsprechend müssen sie ihre Versicherten über den Datenschutz in der ePA aufklären.
+
+**Wer haftet bei einem Datenmissbrauch?**
+
+Nicht der Arzt.
+
+**Wer übernimmt die Aufklärung bezüglich des Datenschutzes?**
+
+Die Krankenkassen sind verpflichtet, ihre Versicherten aufzuklären.
+
+**Die Krankenkassen dürfen die kompletten Abrechnungsdaten in die ePA überspielen. Wo bleiben
+Datenschutz und Schutz des Betriebsgeheimnisses?**
+
+Das ist eine gesetzliche Vorgabe.
+
+**Meine Behandlungsdokumentation enthält auch persönliche Vermerke. Können solche sensiblen
+Informationen vom Teilen in der ePA ausgenommen werden?**
+
+Es ist empfehlenswert, solche Vermerke nicht in die Akte aufzunehmen. Denn Patienten können verlangen,
+dass Psychotherapeuten und Ärzte eine Kopie der Behandlungsdokumentation komplett in ihre ePA
+übertragen.
+
+**Müssen die Patienten eine neue Datenschutzerklärung unterschreiben?**
+
+Nein, das ist nicht erforderlich.
+
+**Wie sind die Daten geschützt, falls der Patient seine Gesundheitskarte verliert?**
+
+Patienten sind verpflichtet, den Verlust ihrer elektronischen Gesundheitskarte (eGK) der Krankenkasse zu
+melden, damit diese die Karte sperren kann. Dann kann die eGK auch nicht mehr für den Zugriff auf die ePA
+genutzt werden. Zudem ist für den „Finder“ der Karte kein unmittelbarer Zugriff auf die ePA-Daten möglich,
+da auch der Zugriff per App gesichert erfolgt. Allein die eGK reicht nicht für den Zugriff aus.
+
+**Was können Praxen tun, damit die Daten sicher sind?**
+
+Ärzte und Psychotherapeuten sollten generell wachsam sein, was den Konnektor, das Kartenterminal und
+die SMC-B-Karte, die im Kartenterminal steckt, betrifft. Die drei Komponenten ermöglichen den Zugang in
+die Telematikinfrastruktur (TI). Mit der PIN der SMC-B-Karte melden sich Praxen täglich in der TI an; sie darf
+keinesfalls leichtfertig an Dritte herausgegeben werden.
+
+Außerdem muss die Praxis sich vor Viren schützen, die entsprechenden Programme installieren und ihre IT-
+System immer auf dem aktuellen Stand halten. Dies gilt auch für den Datenaustausch außerhalb der ePA.
+Denn die ePA bietet selbst keinen Virenscan an. Allerdings sind viele Dokumentenarten, die ein hohes
+Risiko für Viren beinhalten, technisch von der ePA ausgeschlossen, zum Beispiel ausführbare Dateien und
+Microsoft-Office-Dateien. So sind PDFs nur in der sichereren Version PDF/A zugelassen. Auch Patienten
+können also nicht ohne Weiteres schadhafte Dateien in die ePA hochladen.
+
+
+## ABRECHNUNG UND VERGÜTUNG
+
+**Wird die Befüllung der ePA vergütet?**
+
+Ja. Es gibt drei Gebührenordnungspositionen (GOP), die Ärzte und Psychotherapeuten für die Befüllung
+einer ePA abrechnen können. Sie werden extrabudgetär vergütet.
+
+**Welche Leistungen können Praxen abrechnen?**
+
+Ärzte und Psychotherapeuten, die eine ePA als erste befüllen, rechnen die GOP 01648 (89 Punkte / 2025:
+11,03 Euro) ab. Die GOP ist nur berechnungsfähig, wenn noch kein anderer Arzt, Zahnarzt oder
+Psychotherapeut in einer Praxis oder einem Krankenhaus einen Befund oder ein anderes Dokument
+eingestellt hat (eRezepte zählen nicht dazu). Sie ist also sektorenübergreifend nur einmal je Patient
+berechnungsfähig (auch nicht neben GOP 01647 und 01431)
+
+Für die weitere Befüllung, wenn also bereits Dokumente in die ePA eingestellt wurden, wird die GOP 01647
+(15 Punkte / 2025: 1,86 Euro) angesetzt. Der Zuschlag ist einmal im Behandlungsfall berechnungsfähig
+(nicht neben GOP 01648). Erfolgt die Befüllung ohne persönlichen Patienten-Kontakt (auch nicht per Video)
+rechnen Praxen die GOP 01431 (3 Punkte / 2025: 37 Cent) ab. Dieser Zuschlag ist bis zu viermal im Arztfall
+berechnungsfähig (nicht mehrmals am Behandlungstag).
+
+**Gilt das Ausstellen eines eRezepts auch als Erstbefüllung?**
+
+Nein, die Übertragung von Verordnungs- und Dispensierdaten aus verordneten und abgegebenen
+eRezepten in die elektronische Medikationsliste der ePA gilt nicht als Bestandteil der ePA-Erstbefüllung. Die
+ePA-Erstbefüllung erfordert eine aktive Auswahl der im Behandlungskontext relevanten Informationen und
+das explizite Hochladen in die ePA durch die Vertragsärzte und Vertragspsychotherapeuten
+beziehungsweise durch deren Praxismitarbeitende. eRezepte werden nicht von Vertragsärzten in die ePA
+eingestellt, sondern automatisch über den eRezept-Server in die elektronische Medikationsliste der ePA
+übertragen.
+
+## NUTZUNG DER AKTE DURCH VERSICHERTE
+
+**Gibt es für Versicherte eine einheitliche ePA oder hat jede Kasse ihre eigene?**
+
+Jede Krankenkasse stellt ihren Versicherten eine eigene ePA zur Verfügung. Durch die Zulassung bei der
+gematik wird sichergestellt, dass jede ePA durch das Praxisverwaltungssystem in gleicher Art und Weise
+unterstützt wird. Für die Praxen ergibt sich in der Anwendung aus dem PVS heraus kein Unterschied, ob es
+sich um eine ePA dieser oder jener Krankenkasse handelt.
+
+**Können Versicherte auch noch nach Anlegen der Akte widersprechen?**
+
+Versicherte können der Bereitstellung einer ePA durch ihre Krankenkasse jederzeit widersprechen. Die
+Krankenkassen sind in diesem Fall verpflichtet, die ePA inklusive aller Daten zu löschen.
+
+**Was passiert, wenn der Versicherte die Kasse wechselt?**
+
+Bei einem Krankenkassenwechsel kann der Versicherte seine Daten in die ePA der neuen Krankenkassen
+übertragen lassen. Die Migration erfolgt durch die Krankenkassen.
+
+
+**Wie werden die Versicherten über die ePA informiert?**
+
+Es ist Aufgabe der Krankenkassen, die Versicherten vollumfänglich zu informieren.
+
+**Können Patienten mit der ePA-App ihre Befunde selbst einscannen und auch wieder löschen?**
+
+Patienten können mit der ePA-App Arztbriefe, Befunde etc. einscannen oder abfotografieren und in der
+ePA speichern. Auch das Löschen ist erlaubt.
+
+**Können Patienten die ePA auch ohne App nutzen?**
+
+Für die Nutzung der ePA ist die ePA-App nicht zwingend erforderlich. Die ePA wird dann genauso befüllt,
+und Ärzte, Psychotherapeuten, Apotheker etc. haben Zugriff. Der Versicherte kann die Daten allerdings
+nicht selbst einsehen, hochladen oder verwalten. Wer die ePA aktiv nutzen will, benötigt eine App seiner
+Krankenkasse. Möglich ist, dass der Versicherte eine Person seines Vertrauens benennt, die für ihn die ePA
+in der App verwaltet. Die Vertretung hat grundsätzlich die gleichen Zugriffsrechte. Zudem sind die
+Krankenkassen verpflichtet, Ombudsstellen einzurichten. Diese Stellen sollen die Versicherten bei allen
+Fragen und Problemen bei der Nutzung der ePA unterstützen. Auch dort können Versicherte Widersprüche
+einreichen.
+
+**Wie können gesetzliche Betreuungspersonen Einblick in die ePA nehmen?**
+
+Versicherte, die die App nicht selbst bedienen möchten oder können, weil sie zum Beispiel kein
+Smartphone besitzen, können Vertreter benennen. Das können Familienangehörige, Freunde oder
+gesetzliche Betreuungspersonen sein. Die Vertreter können zum Beispiel Dokumente einstellen oder
+verbergen.
+
+```
+Weitere Informationen zur ePA: http://www.kbv.de/epa
+```
+
+
+Im Folgenden sind die FAQs aus dem KBV-Dokument „PraxisInfoSpezial: ePA für alle“ zusammengefasst, die speziell für Ärzte und Psychotherapeuten relevant sind.
+
+### Einführung der ePA
+- **Ab wann nutzbar?**: Ab 29. April 2025, wenn PVS-Hersteller ePA-Module bereitstellen. Freiwillig zunächst, ab 1. Oktober 2025 verpflichtend.
+- **Sinn des Testens?**: Praxen sollten die ePA früh testen, um Probleme vor der Pflichtphase zu klären.
+- **Informationsquellen?**: KBV-Website, PraxisWissen-Serviceheft, Infoblätter, Erklärvideos, Materialien von KVen und gematik.
+- **Support?**: PVS-Hersteller oder IT-Dienstleister; Fehler können an gematik gemeldet werden.
+- **Sanktionen bei fehlendem Modul?**: Keine Sanktionen 2025 (laut BMG). KBV lehnt Sanktionen ab und fordert nutzerfreundliche Digitalisierung.
+
+### Rund um die ePA
+- **Definition**: Digitale Akte für Gesundheitsdaten (Arztbriefe, Befunde, Medikationsliste), vom Versicherten gesteuert.
+- **Unterschied zur Behandlungsdokumentation?**: ePA ist Sekundärdokumentation, ersetzt nicht die PVS-Dokumentation.
+- **Innerärztlicher Austausch?**: Bleibt unverändert; direkte Kommunikation (z. B. via KIM) nötig, da Patienten Daten löschen können.
+- **Arztbriefe via KIM?**: Ja, zusätzlich zur ePA, für spätere Zugriffe durch andere Ärzte.
+- **Nutzen bei unvollständiger ePA?**: Ergänzt Anamnese und Diagnostik, auch wenn nicht alle Daten vorliegen.
+- **Freiwilligkeit?**: Versicherte können widersprechen; ePA wird dann gelöscht.
+- **Videosprechstunde?**: Zugriff möglich, wenn Versichertenkarte in den letzten 90 Tagen gesteckt wurde oder Zugriff via App erteilt wird.
+- **Privatversicherte?**: Private Kassen dürfen ePA anbieten, keine Pflicht (siehe PKV-Verband).
+
+### Zugriff und Einsichtnahme
+- **Zugriff?**: Automatisch für 90 Tage nach Stecken der eGK, ohne PIN.
+- **Einverständnis?**: Keine schriftliche/mündliche Erlaubnis nötig; Behandlungskontext via eGK ausreichend.
+- **Gesamte ePA sichtbar?**: Ja, außer bei gesperrten Daten.
+- **Anzeige gesperrter Dokumente?**: Nein, aus Datenschutzgründen.
+- **Zugriffsverlängerung?**: Patienten können Zugriff via App verlängern; neues eGK-Stecken setzt 90 Tage zurück.
+- **Befundabfrage?**: Direkte Übermittlung (z. B. via KIM) bleibt Pflicht; ePA ergänzt.
+- **Volltextsuche?**: Ab März 2026.
+- **Suche nach Datum/Art?**: Ja, Metadaten-Suche (Datum, Fachgebiet, Dokumentart) möglich.
+- **Neue Dokumente?**: Darstellung (z. B. fett) abhängig vom PVS.
+- **Praxisalltag?**: KBV fordert minimalen Aufwand durch gute PVS-Integration und Aufklärung durch Kassen/BMG.
+- **Notfallzugriff?**: Noch nicht möglich; gematik arbeitet an mobilen Lösungen.
+
+### Befüllung der ePA
+- **Wer befüllt?**: Ärzte, Psychotherapeuten, Krankenhausärzte, Apotheker, später Physiotherapeuten; auch Patienten/Kassen.
+- **Pflichtdaten?**: Befundberichte (invasive/nichtinvasive Maßnahmen), Bilddiagnostik, Laborbefunde, eArztbriefe; auf Wunsch: DMP-Daten, Organ-/Gewebespende, Vorsorgevollmachten, eAU.
+- **Kinder/Jugendliche?**: Keine Pflicht bei therapeutischen Gründen oder Kindeswohlgefährdung (KBV-Richtlinie).
+- **Schnupfen?**: Nur relevante, vollständige Befunde, keine Teilbefunde.
+- **Impfausweis/Mutterpass?**: Vorgesehen, aber zunächst nicht elektronisch verfügbar.
+- **Alte Befunde?**: Aufgabe der Kassen (2x in 24 Monaten, max. 10 Dokumente); Ärzte nur bei Relevanz.
+- **Fachärzte?**: Alle Ärzte müssen eigene, elektronische Befunde einstellen.
+- **Laborbefunde?**: Auftraggeber stellt ein; direkte Labor-Einstellung nur mit App-Zugriff.
+- **Überweisungen?**: Keine automatische Einstellung; als PDF möglich, aber nicht verpflichtend.
+- **Medikationsliste?**: Nur eRezepte ab ePA-Start; Medikationsplan ab März 2026.
+- **Patientenkurzakte?**: Später verfügbar als Anamnese-Zusammenfassung.
+- **Signatur?**: Nicht generell nötig, außer bei gesetzlichen Vorgaben (z. B. eArztbriefe).
+- **Zeitaufwand?**: Kopien von Befunden/Arztbriefen; Dauer abhängig vom PVS.
+- **Dateiformate?**: Zunächst PDF/A; Bilddateien (z. B. DICOM) später.
+- **Delegation?**: MFA kann befüllen, auch nach Patientenbesuch.
+- **Patienten-Befüllung?**: Via ePA-App (z. B. Vitaldaten, gescannte Befunde).
+- **MIOs?**: Elektronischer Medikationsplan ab März 2026; Impfpass-MIO in Planung.
+- **Abrechnungsdaten?**: Kassen stellen Leistungsdaten ein; Versicherte können widersprechen/ausblenden.
+- **Diagnosekorrektur?**: Via Kasse mit ärztlichem Nachweis, innerhalb 4 Wochen.
+- **Notfalldatensatz?**: Dauerdiagnosen, Medikation, Allergien, Kontaktdaten; wird zur ePKA.
+
+### Informations- und Dokumentationspflichten
+- **Informationspflicht?**: Ärzte informieren über ePA-Befüllung (mündlich/Aushang); KBV-Poster verfügbar.
+- **Hochsensible Daten?**: Widerspruchsrecht bei STDs, psychischen Erkrankungen, Abbrüchen; Widerspruch dokumentieren.
+- **Genetische Daten?**: Nur mit schriftlicher/elektronischer Einwilligung.
+- **Dokumentation?**: Widersprüche, Einwilligungen, hochsensible Daten in Behandlungsdokumentation.
+
+### Technik und Funktionsweise
+- **Ausstattung?**: TI-Anschluss (Konnektor, Praxisausweis), PVS mit ePA-Update, eHBA.
+- **Kosten?**: TI-Finanzierungspauschale.
+- **Ohne Konnektor?**: Nicht möglich; TI-Anschluss erforderlich.
+- **Patienten ohne App?**: ePA wird befüllt, aber keine Eigenverwaltung möglich.
+- **Virenschutz?**: Praxis verantwortlich; ePA schließt riskante Formate aus (z. B. ausführbare Dateien).
+- **Stufenweiser Ausbau?**: Komplexität erfordert schrittweise Einführung.
+- **Datenübertragung?**: Via TI; Speicherung auf Kassen-Servern.
+- **Zugriffsprobleme?**: PVS-Option „Zugriff herstellen“ oder IT-Dienstleister kontaktieren.
+
+### Rechtliche Fragen
+- **Datenentscheidung?**: Gesetz (§347 SGB V); Patient kann widersprechen/sperren.
+- **Routinemäßige Einsicht?**: Keine Pflicht; Anamnese bleibt Basis.
+- **Patienten-Mitwirkung?**: Pflicht, auf relevante ePA-Daten hinzuweisen.
+- **Falsche Angaben?**: Keine Haftung für Ärzte, wenn Angaben plausibel.
+- **Datenrichtigkeit?**: Grundsätzlich vertrauenswürdig, außer bei offensichtlicher Unplausibilität.
+- **Informationswust?**: Keine Pflicht zur anlasslosen Suche; Anamnese entscheidend.
+- **Aufklärungspflichten?**: Unverändert; zusätzliche Infos zu Widersprüchen.
+- **Schweigepflicht?**: Nicht verletzt; gesetzlich geregelt (§9 DSGVO).
+- **Psychotherapeuten?**: Belehrungspflicht bei Widerspruchsrecht für psychische Erkrankungen.
+- **Befüllungsverweigerung?**: Nicht erlaubt; Pflicht per §347 SGB V.
+- **Ohne TI?**: Verstößt gegen Pflichten; Sanktionen möglich.
+- **Aufbewahrungspflicht?**: ePA ersetzt nicht die 10-jährige PVS-Dokumentation.
+- **Haftung bei Übersehen?**: Ärztliche Sorgfalt erforderlich.
+- **Dokumentationspflicht?**: Unverändert; ePA ist Sekundärdokumentation.
+- **Patientenlöschung?**: Patient verantwortlich; keine Beweislast für Ärzte.
+- **Diagnosekorrektur?**: Arzt für eigene Befunde; Patient kann löschen.
+- **Praxisaufgabe?**: ePA ersetzt nicht PVS-Dokumentation.
+- **Datenverheimlichung?**: Keine Haftung für Ärzte.
+- **Löschwünsche?**: Patient löscht selbst.
+- **Einblickspflicht?**: Praxis muss Zugriff gewähren, wenn Patient es wünscht.
+
+### Psychotherapie
+- **Änderungen?**: Pflicht zur Befüllung; besondere Widerspruchsrechte für hochsensible Daten.
+- **Daten?**: Wie Ärzte; keine Stundenprotokolle, nur elektronische Befunde.
+- **Abrechnungsdiagnosen?**: Versicherte können widersprechen/ausblenden.
+- **eRezepte?**: Medikationsliste gesamthaft ausblendbar.
+- **Medikationsliste?**: Psychotherapeuten haben Zugriff, wenn nicht ausgeblendet.
+- **Psychiatrische Medikamente?**: Gesamthaftes Ausblenden möglich.
+- **Nutzen?**: Zugriff auf somatische/medikamentöse Daten relevant.
+
+### Datenschutz
+- **Verantwortung?**: Krankenkassen, nicht Ärzte.
+- **Haftung?**: Nicht Ärzte.
+- **Aufklärung?**: Aufgabe der Kassen.
+- **Abrechnungsdaten?**: Gesetzlich vorgeschrieben.
+- **Persönliche Vermerke?**: Nicht einstellen.
+- **Datenschutzerklärung?**: Nicht erforderlich.
+- **Kartenverlust?**: Meldepflicht; eGK allein reicht nicht für Zugriff.
+- **Datensicherheit?**: Praxis schützt eigene IT; ePA schließt riskante Formate aus.
+
+### Abrechnung und Vergütung
+- **Vergütung?**: Extrabudgetäre GOPs:
+  - GOP 01648 (Erstbefüllung, 11,03 €, einmalig).
+  - GOP 01647 (Weitere Befüllung, 1,86 €, einmal pro Behandlungsfall).
+  - GOP 01431 (Ohne Kontakt, 0,37 €, bis 4x pro Arztfall).
+- **eRezepte?**: Keine Erstbefüllung; automatische Übertragung.
+
+### Nutzung durch Versicherte
+- **Einheitliche ePA?**: Jede Kasse eigene ePA; PVS-unabhängig.
+- **Widerspruch?**: Jederzeit möglich; ePA wird gelöscht.
+- **Kassenwechsel?**: Datenmigration durch Kassen.
+- **Information?**: Aufgabe der Kassen.
+- **Scannen/Löschen?**: Via ePA-App möglich.
+- **Ohne App?**: Befüllung/Zugriff möglich, aber keine Eigenverwaltung.
+- **Betreuungspersonen?**: Vertreter haben gleiche Rechte.
+
+## Ergänzende Aspekte
+### Forschungsdatenspende
+Ab Juli 2025 können Versicherte pseudonymisierte Daten für die Forschung freigeben, um neue Therapien und Erkenntnisse zu fördern. Dies ist freiwillig und stärkt die medizinische Forschung.
+
+### Internationale Einbindung
+Die ePA ist mit europäischen Standards interoperabel. Die elektronische Patientenkurzakte (ePKA) soll grenzüberschreitend Notfalldaten bereitstellen (ab Juli 2025).
+
+### Herausforderungen
+- **Technische Umsetzung**: Verzögerungen bei PVS-Updates und fehlende Funktionen (z. B. Volltextsuche bis 2026).
+- **Akzeptanz**: Ärzte befürchten Mehraufwand; Patienten benötigen klare Kommunikation über Widerspruchsrechte.
+- **Barrierefreiheit**: Kritik an unzureichender Zugänglichkeit für Menschen mit Behinderungen.
+Die KBV und gematik bieten Schulungen und Infomaterial, um die Integration zu erleichtern.
+
+### Ausblick
+Die ePA soll das Gesundheitswesen revolutionieren, indem sie die „Zettelwirtschaft“ beendet und die Versorgung digitalisiert. Zukünftige Erweiterungen umfassen die Integration von Fitness-Tracker-Daten (z. B. Blutzucker, Blutdruck) und KI-gestützte Diagnostik. Der Erfolg hängt von technischer Stabilität, Akzeptanz und Datensicherheit ab.
+
+---
+Quellen:
+- Kassenärztliche Bundesvereinigung (KBV): PraxisInfoSpezial ePA für alle, April 2025
+- Bundesgesundheitsministerium (www.bundesgesundheitsministerium.de)
+- gematik (www.gematik.de)
+- Verbraucherzentrale (www.verbraucherzentrale.de)
+---
