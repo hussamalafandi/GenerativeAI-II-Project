@@ -1,56 +1,27 @@
-# Homework Project: Build a RAG (Retrieval-Augmented Generation) System
+# 🔍 Generative QA mit LangChain, Gemini 2 & Web-Retrieval
 
-## Objective
-Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves information from an external document source and uses it to answer questions. This will demonstrate how language models can be grounded in up-to-date, domain-specific knowledge.
-
-> The chosen model has a knowledge cutoff in **August 2024**, so answers to recent topics must rely on **retrieved documents**, not internal model knowledge.
+Dieses Projekt ist ein Frage-Antwort-System basierend auf **Google Gemini 2.0**, **LangChain**, **LangSmith Tracing** und einer Sammlung aktueller Web-Artikel. Es kombiniert direkte LLM-Antworten mit dokumentenbasiertem Retrieval und speichert den Gesprächskontext.
 
 ---
 
-## Core Requirements
+## 🚀 Funktionen
 
-### 1. Document Indexing
-- Use **Chromadb** with **persistence enabled**.
-- Choose a document of an event that happend after **August 2024**
-- Include document **splitting** (≥ 50 chunks) using appropriate text splitting strategies.
-
-### 2. System Components
-- Use `gemini-2.0-flash`
-- Implement with **LangChain** or **LlamaIndex**.  
-- Use **LangSmith** or **LangFuse**.  
-- Use **Git and GitHub** for version control.
-- Don not use pre-built agents.
-- **Dialog flow** (multi-turn interaction)  
-- **Memory** (context tracking across interactions)  
-
-### 3. Experimentation  
-- Compare **system prompts** and their effects on model behavior.  
-- Use a variety of **questions** to evaluate system robustness (at leat 5 different questions with correct answers).
-
-### 4. Reproducibility  
-- Submit your code via **GitHub**.  
-- Use a clean repository:  
-  - ❌ **No large files** in git history  
-  - ❌ **No secret tokens** in commit history
-
-### 5. Submission  
-- **Deadline:** `11.05 at 23:59`  
-- **Deliverables:**
-  - GitHub repo link
-  - Link to your **LangSmith** or **LangFuse** project.
-  - Jupyter notebook or script demonstrating:
-    - Index creation
-    - Retrieval
-    - Answer generation
-    - Prompt variations
+- Verwendung von **Google Gemini 2.0 Flash** (LLM)
+- Beantwortung aktueller Fragen mit und ohne Retrieval
+- Integration von Webartikeln aus Nachrichtenquellen (DW, Tagesschau, Wikipedia, ZDF usw.)
+- Speicherung von Fragen und Antworten im lokalen JSON-Verlauf
+- Kontextbasierte Antwortgenerierung über LangChain + LangSmith
+- Embedding & Vektor-Suche via **ChromaDB**
 
 ---
 
-## Bonus Features (Optional, for Extra Credit)
+## 📦 Voraussetzungen
 
-Implement one or more of the following to enhance your RAG system:
+- Python 3.10+ (Colab empfohlen)
+- API-Zugänge:
+  - [Google AI / Gemini API](https://ai.google.dev/)
+  - [LangSmith](https://smith.langchain.com/o/77078b25-f602-4022-9037-17871b75fbb5/projects/p/fe0e8900-acc2-4dda-a081-38bc677cf9cf?timeModel=%7B%22duration%22%3A%227d%22%7D)
+- Installiere benötigte Pakete:
 
-- ✅ **Metadata filtering** during document retrieval  
-- ✅ **Multi-Query retrieval** (ask multiple questions or rephrase to get better context)
-
----
+```bash
+pip install langchain langsmith langchain_google_genai langchain_community beautifulsoup4 chromadb
