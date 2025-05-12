@@ -1,18 +1,19 @@
-# qa_chain.py — RAG with Gemini, ChromaDB, and Chat History
+# qa_chain_with_memory.py — Interactive RAG Chat with Memory + LangSmith Tracing
 
 import os
 from dotenv import load_dotenv
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnableLambda
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.memory import ConversationBufferMemory
-from langchain_core.prompts import PromptTemplate
-from langchain_core.runnables import RunnableLambda
+from langchain_core.tracers import LangChainTracer
 
-# Load environment variables
+# 🔐 Load environment variables
 load_dotenv()
 
-# Load ChromaDB with embeddings
+# 🧠 Load ChromaDB with embeddings
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vectorstore = Chroma(
     persist_directory="chroma_store",
@@ -20,18 +21,18 @@ vectorstore = Chroma(
 )
 retriever = vectorstore.as_retriever()
 
-# Initialize conversation memory
+# 🧠 Initialize chat memory
 memory = ConversationBufferMemory(
     return_messages=True,
     memory_key="chat_history"
 )
 
-# Prompt template with history
+# 📜 Prompt with context and chat history
 prompt = PromptTemplate.from_template("""
-You are an expert assistant. Use the following context and chat history to answer the user's question.
-If the answer is not found in the context, reply with "I don't know."
+Use the following context and chat history to answer the question.
+If the answer is not in the context, just say you don't know.
 
-Chat history:
+History:
 {chat_history}
 
 Context:
@@ -41,15 +42,15 @@ Question: {question}
 Answer:
 """)
 
-# LLM (Gemini Flash)
+# 🤖 Load Gemini model
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.3
 )
 
-# RAG chain with memory
-rag_chain_with_memory = (
+# 🔗 Build RAG chain with memory
+rag_chain = (
     RunnableLambda(lambda x: {
         "context": retriever.get_relevant_documents(x["question"]),
         "question": x["question"],
@@ -59,18 +60,25 @@ rag_chain_with_memory = (
     | llm
 )
 
-# Interactive chat
-print("\n🔎 Ask your question (type 'exit' to quit):")
+# 🧪 Enable LangSmith tracing safely
+tracer = LangChainTracer(project_name="RAG-Chat-With-Memory")
+
+# 💬 Interactive Q&A loop
+print("Ask your question (type 'exit' to quit):")
 while True:
     question = input("\n❓ Question: ")
     if question.lower() in ["exit", "quit"]:
         print("👋 Goodbye!")
         break
 
-    result = rag_chain_with_memory.invoke({"question": question})
+    result = rag_chain.invoke(
+        {"question": question},
+        config={"callbacks": [tracer]}
+    )
+
     print("📄 Answer:", result.content)
 
-    # Store exchange in memory
+    # Store in memory manually
     memory.chat_memory.add_user_message(question)
     memory.chat_memory.add_ai_message(result.content)
 
