@@ -1,41 +1,48 @@
-# qa_chain.py — Interactive Chat with Document Retrieval via ChromaDB + Gemini
-# Implements Retrieval-Augmented Generation (RAG) with conversational memory using LangChain
-
 import os
 from dotenv import load_dotenv
-from langchain_core.prompts import PromptTemplate
-from langchain_core.runnables import RunnableLambda
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.memory import ConversationBufferMemory
-from langsmith import traceable
+from langchain.retrievers.multi_query import MultiQueryRetriever
+from langchain_core.prompts import PromptTemplate
+from langchain_core.runnables import RunnableLambda
 from langchain_core.tracers import LangChainTracer
 
-# 🔐 Load environment variables (e.g., API keys) from .env file
+# ========================================
+# 🔐 Load API keys from .env
+# ========================================
 load_dotenv()
 
-# 🧠 Load ChromaDB vector store with precomputed embeddings
+# ========================================
+# 🧠 Load Chroma vector store
+# ========================================
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vectorstore = Chroma(
     persist_directory="chroma_store",
     embedding_function=embedding_model
 )
-retriever = vectorstore.as_retriever()
 
-# 💬 Initialize memory to track conversation history
-memory = ConversationBufferMemory(
-    return_messages=True,
-    memory_key="chat_history"
+# Apply metadata filtering to restrict retrieval to only relevant chunks
+filtered_retriever = vectorstore.as_retriever(search_kwargs={
+    "filter": {"source": "biocomputer_article"}  # Match the metadata used in indexing
+})
+
+# Wrap in MultiQueryRetriever to improve results
+retriever = MultiQueryRetriever.from_llm(
+    retriever=filtered_retriever,
+    llm=ChatGoogleGenerativeAI(
+        model="gemini-2.0-flash",
+        google_api_key=os.getenv("GOOGLE_API_KEY"),
+        temperature=0.3
+    )
 )
 
-# 📜 Prompt template that includes history and context
+# ========================================
+# 🧾 Prompt template
+# ========================================
 prompt = PromptTemplate.from_template("""
-Use the following context and conversation history to answer the question.
-If the answer is not in the context, say you don’t know.
-
-Chat History:
-{chat_history}
+Answer the question using ONLY the context below.
+If the answer is not in the context, say "I don't know."
 
 Context:
 {context}
@@ -44,42 +51,38 @@ Question: {question}
 Answer:
 """)
 
-# 🤖 Load the Gemini model (Flash version)
+# ========================================
+# 🤖 Gemini model for answer generation
+# ========================================
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     google_api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.3
 )
 
-# 🔗 Define the chain: retrieves context, formats prompt, generates answer
-chain = (
+# ========================================
+# 🔗 RAG Chain (no memory, multi-query retrieval)
+# ========================================
+rag_chain = (
     RunnableLambda(lambda x: {
         "context": retriever.get_relevant_documents(x["question"]),
-        "question": x["question"],
-        "chat_history": memory.load_memory_variables({})["chat_history"]
+        "question": x["question"]
     })
     | (lambda x: prompt.format(**x))
     | llm
 )
 
-# 💬 Interactive command-line interface
-print("🔎 Enter your question (or type 'exit' to quit):")
+# ========================================
+# 🚀 Interactive loop with tracing enabled
+# ========================================
+print("\nAsk your question (type 'exit' to quit):")
 while True:
-    question = input("\n🧠 Your question: ")
+    question = input("\n❓ Question: ")
     if question.lower() in ["exit", "quit"]:
         print("👋 Goodbye!")
         break
 
-    # 📊 Enable tracing for LangSmith
     tracer = LangChainTracer()
+    result = rag_chain.invoke({"question": question}, config={"callbacks": [tracer]})
 
-    # Execute the chain with tracing enabled
-    result = chain.invoke(
-        {"question": question},
-        config={"callbacks": [tracer]}
-    )
-    print("📄 Answer:", result.content)
-
-    # 🧠 Update memory manually after each turn
-    memory.chat_memory.add_user_message(question)
-    memory.chat_memory.add_ai_message(result.content)
+    print("\U0001F4C4 Answer:", result.content)
