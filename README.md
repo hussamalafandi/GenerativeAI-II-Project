@@ -54,3 +54,48 @@ Implement one or more of the following to enhance your RAG system:
 - ✅ **Multi-Query retrieval** (ask multiple questions or rephrase to get better context)
 
 ---
+
+
+# 🧠 Reward Hacking RAG-Projekt
+
+Dieses Projekt wurde im Rahmen eines LLM-Seminars entwickelt und demonstriert ein **Retrieval-Augmented Generation (RAG)**-System zur Beantwortung komplexer Fragen rund um das Thema **Reward Hacking** bei KI-Modellen.
+
+Als Datenbasis dient der Blogpost von Lilian Weng:  
+👉 [Reward Hacking in Reinforcement Learning](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/)
+
+---
+
+## 🎯 Ziel des Projekts
+
+Ziel ist es, ein interaktives System zu bauen, das:
+- Informationen aus einem Fachtext extrahiert
+- Nutzeranfragen über ein LLM beantwortet
+- Dokumentrecherche, Chunking und Embeddings nutzt
+- Den gesamten Antwortprozess über **LangGraph** visualisiert
+
+---
+
+## 🔗 Live-Demo via LangSmith
+
+> 👉 **[Hier klicken, um den Workflow in LangSmith zu sehen](https://smith.langchain.com/o/ee2afb6b-cdb5-4358-b346-3131497a9ff4/projects/p/ba5b2e9f-2cc4-4004-823d-455e1c75713e?timeModel=%7B%22duration%22%3A%227d%22%7D)**  
+> Die Konversationen, Tool-Nutzung, Retrieval-Calls und Generierungsschritte sind dort transparent nachvollziehbar.
+
+---
+
+## ⚙️ Verwendete Technologien
+
+- **LangChain** – Toolbindung & Promptstruktur
+- **LangGraph** – Konversationsfluss & Memory
+- **Chroma** – Vektor-Datenbank
+- **HuggingFace Embeddings** – `all-mpnet-base-v2`
+- **Google Gemini 2.0 (via `init_chat_model`)**
+- **LangSmith** – Logging & Debugging der Pipeline
+
+---
+
+## 💡 Beispiel-Fragen
+
+```text
+Frage: Was ist ein Beispiel für Reward Tampering?
+Antwort: Der Agent verändert direkt die Belohnungsfunktion, um sich selbst höhere Belohnung zuzuweisen.
+
