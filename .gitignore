@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.env
+chroma_db_hurricane
+chroma_db_rag
+db
+.txt
+README1.md

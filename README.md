@@ -1,56 +1,73 @@
-# Homework Project: Build a RAG (Retrieval-Augmented Generation) System
+# 🌪️ AI-Powered Hurricane Analysis System
 
-## Objective
-Develop a basic Retrieval-Augmented Generation (RAG) system that retrieves information from an external document source and uses it to answer questions. This will demonstrate how language models can be grounded in up-to-date, domain-specific knowledge.
+An advanced question-answering system using RAG (Retrieval-Augmented Generation) technology and Google's Gemini model.  
+✔ Supports both Arabic and English  
+✔ Works with post-August 2024 reports  
+✔ Maintains conversation context  
 
-> The chosen model has a knowledge cutoff in **August 2024**, so answers to recent topics must rely on **retrieved documents**, not internal model knowledge.
 
----
+## 📋 Table of Contents
+- [Requirements](#-requirements)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Examples](#-examples)
+- [Troubleshooting](#-troubleshooting)
 
-## Core Requirements
 
-### 1. Document Indexing
-- Use **Chromadb** with **persistence enabled**.
-- Choose a document of an event that happend after **August 2024**
-- Include document **splitting** (≥ 50 chunks) using appropriate text splitting strategies.
+## 📌 Requirements
+- Python 3.9 or newer
+- API key from [Google AI Studio](https://aistudio.google.com/)
+- PDF files containing hurricane data
 
-### 2. System Components
-- Use `gemini-2.0-flash`
-- Implement with **LangChain** or **LlamaIndex**.  
-- Use **LangSmith** or **LangFuse**.  
-- Use **Git and GitHub** for version control.
-- Don not use pre-built agents.
-- **Dialog flow** (multi-turn interaction)  
-- **Memory** (context tracking across interactions)  
+## 🛠️ Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/hussamalafandi/GenerativeAI-II-Project/tree/rahaf-aswad
+cd GenerativeAI-II-Project
+Install dependencies:
 
-### 3. Experimentation  
-- Compare **system prompts** and their effects on model behavior.  
-- Use a variety of **questions** to evaluate system robustness (at leat 5 different questions with correct answers).
+bash
+pip install -r requirements.txt
+Add report files to the data/ directory:
 
-### 4. Reproducibility  
-- Submit your code via **GitHub**.  
-- Use a clean repository:  
-  - ❌ **No large files** in git history  
-  - ❌ **No secret tokens** in commit history
+bash
+mkdir data
+cp /path/to/your/report.pdf data/hurricane_report_2024.pdf
+Create environment file:
 
-### 5. Submission  
-- **Deadline:** `11.05 at 23:59`  
-- **Deliverables:**
-  - GitHub repo link
-  - Link to your **LangSmith** or **LangFuse** project.
-  - Jupyter notebook or script demonstrating:
-    - Index creation
-    - Retrieval
-    - Answer generation
-    - Prompt variations
+bash
+echo "GEMINI_API_KEY=your_api_key_here" > .env
+▶️ Usage
+bash
+python main.py
+Example Queries:
+> What was the maximum recorded wind speed?
+> Which areas were most affected?
+> What was the evacuation plan?
+🗂️ Project Structure
+hurricane-analysis/
+├── data/                   # Hurricane reports (PDF)
+├── src/
+│   ├── document_loader.py  # Document processing
+│   ├── rag_system.py       # Core system
+│   └── utils.py           # Helper functions
+├── main.py                # Main application
+├── requirements.txt       # Dependencies
+└── README.md              # This file
+💡 Examples
+Question	Sample Answer
+"What was the hurricane category?"	"The hurricane reached category 4"
+"Number of emergency shelters"	"12 shelters were opened"
+"Names of affected areas"	"Miami, Tampa, Orlando"
+⚠️ Troubleshooting
+API Key Errors:
 
----
+bash
+export GEMINI_API_KEY="your_key_here"  # Linux/Mac
+set GEMINI_API_KEY="your_key_here"     # Windows
+Inaccurate Answers:
 
-## Bonus Features (Optional, for Extra Credit)
+Ensure documents contain post-August 2024 data
 
-Implement one or more of the following to enhance your RAG system:
-
-- ✅ **Metadata filtering** during document retrieval  
-- ✅ **Multi-Query retrieval** (ask multiple questions or rephrase to get better context)
-
----
+Verify PDFs are text-based (not image scans)
